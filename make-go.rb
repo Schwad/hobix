@@ -1,3 +1,6 @@
+# This makes `go/hobix-install.rb`. I don't think it's needed for local install.
+# This is likely tied to the eval from go.hobix install page
+
 require 'base64'
 require 'yaml'
 
