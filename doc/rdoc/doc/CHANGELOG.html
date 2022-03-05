@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>CHANGELOG - The Book of Hobix</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../COPYING.html">COPYING</a>
+  
+    <li><a href="../README.html">README</a>
+  
+    <li><a href="../doc/CHANGELOG.html">CHANGELOG</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page doc/CHANGELOG">
+
+<p>— %YAML:1.0</p>
+<ul><li>
+<p>version: 0.4 date: 2005-05-22 changes:</p>
+
+<pre>- lib/hobix/api.rb: remote API, currently usable over HTTP!
+- lib/hobix/base.rb: HTTP authorization.
+- lib/hobix/commandline.rb: use remote API from the commandline.
+- lib/hobix/util/patcher.rb: cool! switched to a new YAML-based patch system which is much easier,
+    more foolproof, totally basic, all that!
+- lib/hobix/search/simple.rb: new search index for cataloging words and their content ratings.
+- lib/hobix/entry.rb: new @tags, force_tags, implicit_tags for loosely categorizing entries.
+- lib/hobix/webapp.rb: Tanaka Akira&#39;s WebApp library enhanced and distributed with Hobix.
+- lib/hobix/weblog.rb: added skel_tags, new facets code.  (facets are user interfaces for hobix.)  Load config from a separate file, if available.
+- lib/hobix/comments.rb: comment templates, comment api.
+- lib/hobix/publisher.rb: the new plugin for web administration.
+- share/default-blog.cgi.patch: new patch for using CGI.</pre>
+</li><li>
+<p>version: 0.3c date: 2005-03-10 changes:</p>
+
+<pre>- lib/hobix/out/rss.rb: RSS feed should have correct absolute URLS.
+- lib/hobix/storage/filesys.rb: William Morgan&#39;s excellent IndexEntry patch.  allow
+    customization of the index.hobix file.
+- lib/hobix/weblog.rb: senses need for regeneration of &#39;prev&#39; and &#39;next&#39; pages.
+- lib/hobix/base.rb: the `watch&#39; method is now optional for publish plugins.</pre>
+</li><li>
+<p>version: 0.3b date: 2005-01-18 changes:</p>
+
+<pre>- lib/hobix/commandline.rb: suitable errors if user has no blogs setup. defaulting
+    to use EDITOR, since the object editor is causing tons of confusion.
+- lib/hobix/entry.rb: new keywords, free-tagged categories for entries.
+- lib/hobix/bixwik.rb: getting WikiWords working.
+- lib/hobix/weblog.rb: expand_path always adds complete blohhg URL.  default
+    property methods should allow for cleaner YAML output and simpler customization.
+- lib/hobix/out/atom.rb: added subject tags to Atom feed.
+- lib/hobix/out/quick.rb: working on extracting the erb source for errors.  cleaner
+    paths with weblog.expand_path.
+- lib/hobix/out/rss.rb: subject tags can be per-entry.
+- lib/hobix/publish/ping.rb: allow passing of a URL (if you want your feed to be
+    passed as the URL.)
+- lib/hobix/storage/filesys.rb: new find_attached method for loading comments.</pre>
+</li><li>
+<p>version: 0.3a date: 2004-10-16 changes:</p>
+
+<pre>- lib/hobix/entry.rb: switched from Object#is_a? to Class#==.  was causing problems
+    when loading !omaps.
+- lib/hobix/weblog.rb: ditto. also, moved out computation of the output_map.
+    this map contains all the information needed to regenerate. having this information
+    readily available is useful for building site maps and determining canonical links
+    in advance. new central_prefix and central_ext settings.
+- lib/hobix/bixwik.rb: the absolutely ridiculous hobix-based wiki. seriously, why am i
+    doing this??
+- lib/hobix/base.rb: added BaseStorage#match for find entries based on regexp.
+- lib/hobix/out/quick.rb: new prepend and append operators for templates.</pre>
+</li><li>
+<p>version: 0.3 date: 2004-10-06 changes:</p>
+
+<pre>- lib/hobix/util/objedit.rb: pagination of form fields, color support,
+    now saves content.
+- lib/hobix/entry.rb: date ids are now relative.
+- share/default-blog.apache-ssi.patch: ditto.</pre>
+</li><li>
+<p>version: 0.2g date: 2004-10-05 changes:</p>
+
+<pre>- lib/hobix/out/rdf.rb: new rss 1.0 module by Giulio Piancastelli!
+- lib/hobix/out/quick.rb: problem with nested unordered list invalid XHTML.
+    Thanks, Eric Stewart!
+- lib/hobix/out/quick.rb: mozilla problem with self-closing anchor tag.
+- lib/hobix/weblog.rb: using YAML::transfer to load the linklist rather than
+    YAML::object_maker.  Yes, better.</pre>
+</li><li>
+<p>version: 0.2f date: 2004-10-04 changes:</p>
+
+<pre>- make-go.rb: added win32-only files.
+- lib/hobix/entry.rb: generalized new property_map
+    method from old to_yaml_property_map.
+- lib/hobix/weblog.rb: ditto.
+- lib/hobix/linklist.rb: ditto.
+- lib/hobix/util/objedit.rb: ncurses-based editor for
+   people who don&#39;t `use editor&#39;.
+- lib/hobix/commandline.rb: aorta now uses ObjEdit class.</pre>
+</li></ul>
+
+<p># Many thank to William Morgan for his testing and suggestions. # The majority of the changes in the 0.2e release were instigated by # his messages to the hobix-is-the-way mailing list.  Thanks, Wm!!</p>
+<ul><li>
+<p>version: 0.2e date: 2004-10-01 changes:</p>
+
+<pre>- bin/hobix: reuses config data from initial installation.
+- go/hobix-install.rb: ditto.
+- lib/hobix/commandline.rb: creation of weblog also spawns
+    editor for hobix.yaml after creation.
+- lib/hobix/weblog.rb: Hobix::Weblog#link is now a URI object.
+    paths are only saved if they differ from the default.
+    templates without entries are updated only if the template
+    changes or the output file is missing.  more detailed
+    page information is passed into publish plugins.
+- lib/hobix/out/quick.rb: monthly archive dates reversed.
+    blank `footer&#39; template chunk added.</pre>
+</li><li>
+<p>version: 0.2d date: 2004-09-20 changes:</p>
+
+<pre>- COPYING: added BSD license text.
+- lib/hobix/out/quick.rb: absolute links.
+- lib/hobix/storage/filesys.rb: ditto.
+- lib/hobix/share/default-blog.apache-ssi.patch: ditto.</pre>
+</li><li>
+<p>version: 0.2c date: 2004-09-12 changes:</p>
+
+<pre>- go/hobix-install.rb: unquoted commands were going to &#39;su&#39;.
+    caching configuration data at the botttom of bin/hobix.
+- lib/hobix/commandline.rb: fixing &#39;edit&#39; to actually save.
+- lib/hobix/weblog.rb: using File.expand_path rather than
+    File.join to figure out if @entry_path, @output_path,
+    and @skel_path are relative or absolute. (people are
+    seeing c:/blog/c:/blog/skel as a result on Windows.</pre>
+</li><li>
+<p>version: 0.2b date: 2004-09-11 changes:</p>
+
+<pre>- bin/hobix: handling bad arguments, reporting proper syntax.
+- lib/hobix/weblog.rb: dumping linklist and lastn in YAML.
+- go/hobix-install.rb: allowing customization of sharepath.</pre>
+</li><li>
+<p>version: 0.2a date: 2004-09-10 changes:</p>
+
+<pre>- lib/hobix/commandline.rb: new `hobix upgrade&#39; command.
+- lib/hobix/config.rb: fixing errors when loading YAML config.</pre>
+</li><li>
+<p>version: 0.2 date: 2004-09-10 changes:</p>
+
+<pre>- lib/hobix/entry.rb: whoops, section_id is supposed to report the path
+    the entry resides in.
+- lib/hobix/weblog.rb: validate that loaded entries on generation
+    have an author listed in the weblog config.</pre>
+</li><li>
+<p>version: 0.1k date: 2004-09-09 changes:</p>
+
+<pre>- go/hobix-install.rb: added ri installation to the web install.
+- lib/hobix/out/atom.rb: the feed tag wasn&#39;t closed.
+- lib/hobix/util/patcher.rb: new module, applies unified diffs.
+    used for adding patches to the default blog.
+- share/default-blog.*: patches for using apache SSIs.</pre>
+</li><li>
+<p>version: 0.1j date: 2004-08-29 changes:</p>
+
+<pre>- make-go.rb: installation of share goods.  version sniffing
+    without require.  automatic setup of blogs.
+- go/hobix-install.rb: ditto.
+- lib/hobix/commandline.rb: obscure setup_blogs command.
+- lib/hobix/linklist.rb: links now display as list items.
+- lib/hobix/out/quick.rb: allow custom template entries. all
+    sidebar entries are now list items.
+- lib/hobix/storage/filesys.rb: better date created detection.</pre>
+</li><li>
+<p>version: 0.1i date: 2004-08-24 changes:</p>
+
+<pre>- lib/hobix/commandline.rb: don&#39;t hide permission errors when posting.
+- lib/hobix/entry.rb: allow initialize to take a block.
+- lib/hobix/weblog.rb: linklist and lastn settings.  Weblog#retouch for
+    regenerating a single path.  use group permissions on output content.
+- lib/hobix/out/erb.rb: tainting.
+- lib/hobix/out/quick.rb: tainting. added `head_tags&#39; and `blog&#39; templates.
+- lib/hobix/out/rss.rb: UH-OH! Time#utc is destructive!  Added dc:creator tag.
+- lib/hobix/storage/filesys.rb: tainting. file editing, `touch&#39;ing and removal
+    of the `created&#39; field have less an affect on the index.  attachments now
+    allow per entry!  (first incarnation of comments.)</pre>
+</li><li>
+<p>version: 0.1h date: 2004-08-19 changes:</p>
+
+<pre>- lib/hobix/weblog.rb: both relative and absolute URLs now how meaning
+    for the Page class.  skel methods now receive path_storage.  conflicts
+    in output now resolved by the deeper skel template.
+- lib/hobix/storage/filesys.rb: path_storage method for skel methods.</pre>
+</li><li>
+<p>version: 0.1g date: 2004-06-30 changes:</p>
+
+<pre>- go/hobix-install.rb: skip gzip on win32.
+- lib/hobix/out/okaynews.rb: bug was overwriting an Entry&#39;s author
+    property with the full author Hash.  bad news.
+- lib/hobix/out/atom.rb: single entry Atom files ok.
+- lib/hobix/out/quick.rb: added quick-summary and quick-archive templates.
+- lib/hobix/storage/filesys.rb: new last_created method.</pre>
+</li><li>
+<p>version: 0.1f date: 2004-06-07 changes:</p>
+
+<pre>- lib/hobix/commandline.rb: default title to a capitalized version of the shortName.
+- lib/hobix/weblog.rb: new `section&#39; prefix.
+- lib/hobix/storage/filesys.rb: all entry ids should use forward slashes.  bug in save_entry
+    kept load_entry from working on that entry ID.
+- lib/hobix/entry.rb: section_id gives the URL path the entry lies in.
+- lib/hobix/out/rss.rb: better timestamps, using Dublin Core now.
+- lib/hobix/out/quick.rb: new quick templates are the true treasure and all
+    will default to them!!</pre>
+</li><li>
+<p>version: 0.1e date: 2004-05-23 changes:</p>
+
+<pre>- install.rb: install Ri documentation automatically.
+- ? [lib/hobix.rb, lib/hobix/weblog.rb, lib/hobix/entry.rb]
+  : new, great Ri documentation.
+- lib/hobix/commandline.rb: moved commandline options into a class.
+- lib/hobix/out/atom.rb: atom 0.3 support.</pre>
+</li><li>
+<p>version: 0.1d date: 2004-05-22 changes:</p>
+
+<pre>- bin/hobix: Added &#39;edit&#39; and &#39;list&#39; commands with method for tabular display.
+    Objects no longer save if nothing is updated from the $EDITOR.
+- lib/hobix/base.rb: ToYamlExtras module contains property mapping code.
+- lib/hobix/entry.rb: EntryEnum class for covering common iteration schemes,
+    such as each_day.  RedCloth is default text processor.  Allow specification
+    of text processor fields and clean YAML output.
+- lib/hobix/linklist.rb: New LinkList entry type.  For storing links, will be
+    used for sidebar links.
+- lib/hobix/storage/filesys.rb: new get_months method for retrieving all
+    archive months.
+- lib/hobix/weblog.rb: cleaner YAML output for weblog config.  cleaner
+    output during regen.</pre>
+</li><li>
+<p>version: 0.1a date: 2004-05-16 changes:</p>
+
+<pre>- Hobix.gemspec: for anyone who wants to make a Gem.
+- install.rb: proper installation of share dir.
+- make-go.rb: generates the go/hobix-installer.yaml, which is
+    leveraged by the go/hobix-installer.rb script.
+- bin/hobix: stores personal config in &#39;$HOME/Application Data/Hobix&#39;
+    on win32.
+- go/hobix-installer.rb: installer script from go.hobix.com.  added
+    gzip encoding on hobix-install.yaml load.
+- lib/hobix/base.rb: now allow plugins to have config options in
+    the hobix.yaml file.
+- lib/hobix/entry.rb: all entries default to folded YAML.
+- lib/hobix/weblog.rb: publisher plugins.  entry and entries are
+    now variable suffixes.  new skel_yearly and skel_methods now
+    available for templates in subdirectories.
+- lib/hobix/out/redrum.rb: new redrum plugin is ERB + Textile.
+- lib/hobix/publish/ping.rb: xml-rpc ping for blo.gs and such.
+- share/default-blog: contains basic blog which is copied into
+    place upon &#39;create&#39; command.</pre>
+</li><li>
+<p>version: 0.1 date: 2004-04-12 changes:</p>
+
+<pre>- bin/hobix: post command working, no create or edit for now.
+- lib/hobix/weblog.rb: dump as !hobix.com,2004/weblog.
+- lib/hobix/storage/filesys.rb: save entries.</pre>
+</li><li>
+<p>version: 0.0b date: 2004-04-12 changes:</p>
+
+<pre>- bin/hobix: command list, RC setup and regen/upgen are working.
+- lib/hobix.rb: requires hobix/weblog.</pre>
+</li><li>
+<p>version: 0.0a  date: 2004-04-10 changes:</p>
+
+<pre>- bin/hobix: moved all options to separate methods in module Hobix::CommandLine.
+- lib/hobix/entry.rb: entry &#39;body&#39; renamed &#39;content&#39;.
+- lib/hobix/weblog.rb: moved page prefixes to separate methods.
+- lib/hobix/storage/filesys.rb: ignore list changed to path properties.
+- lib/hobix/out/rss.rb: entry &#39;body&#39; renamed &#39;content&#39;.</pre>
+</li><li>
+<p>version: 0.0 date: 2004-04-07 changes:</p>
+
+<pre>- lib/hobix/entry.rb: YAML output to !hobix.com,2004/entry.
+- lib/hobix/weblog.rb: Daily archives.
+- lib/hobix/out/rss.rb: Link tags.
+- lib/hobix/storage/filesys.rb: Update entry files with timestamps.</pre>
+</li></ul>
+
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.1.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

@@ -1,0 +1,2562 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module Hobix::CommandLine - The Book of Hobix</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-extended">::extended</a>
+    
+    <li ><a href="#method-i-add_weblog">#add_weblog</a>
+    
+    <li ><a href="#method-i-add_weblog_args">#add_weblog_args</a>
+    
+    <li ><a href="#method-i-add_weblog_explain">#add_weblog_explain</a>
+    
+    <li ><a href="#method-i-aorta">#aorta</a>
+    
+    <li ><a href="#method-i-blogs_weblog">#blogs_weblog</a>
+    
+    <li ><a href="#method-i-blogs_weblog_args">#blogs_weblog_args</a>
+    
+    <li ><a href="#method-i-blogs_weblog_explain">#blogs_weblog_explain</a>
+    
+    <li ><a href="#method-i-config">#config</a>
+    
+    <li ><a href="#method-i-create_weblog">#create_weblog</a>
+    
+    <li ><a href="#method-i-create_weblog_args">#create_weblog_args</a>
+    
+    <li ><a href="#method-i-create_weblog_explain">#create_weblog_explain</a>
+    
+    <li ><a href="#method-i-del_weblog">#del_weblog</a>
+    
+    <li ><a href="#method-i-del_weblog_args">#del_weblog_args</a>
+    
+    <li ><a href="#method-i-del_weblog_explain">#del_weblog_explain</a>
+    
+    <li ><a href="#method-i-druby_weblog">#druby_weblog</a>
+    
+    <li ><a href="#method-i-druby_weblog_args">#druby_weblog_args</a>
+    
+    <li ><a href="#method-i-druby_weblog_explain">#druby_weblog_explain</a>
+    
+    <li ><a href="#method-i-edit_action">#edit_action</a>
+    
+    <li ><a href="#method-i-edit_action_args">#edit_action_args</a>
+    
+    <li ><a href="#method-i-edit_action_explain">#edit_action_explain</a>
+    
+    <li ><a href="#method-i-gets">#gets</a>
+    
+    <li ><a href="#method-i-http">#http</a>
+    
+    <li ><a href="#method-i-http_edit_remote">#http_edit_remote</a>
+    
+    <li ><a href="#method-i-http_get">#http_get</a>
+    
+    <li ><a href="#method-i-http_list_remote">#http_list_remote</a>
+    
+    <li ><a href="#method-i-http_patch_remote">#http_patch_remote</a>
+    
+    <li ><a href="#method-i-http_post">#http_post</a>
+    
+    <li ><a href="#method-i-http_post_remote">#http_post_remote</a>
+    
+    <li ><a href="#method-i-http_search_remote">#http_search_remote</a>
+    
+    <li ><a href="#method-i-join_as_author">#join_as_author</a>
+    
+    <li ><a href="#method-i-list_action">#list_action</a>
+    
+    <li ><a href="#method-i-list_action_args">#list_action_args</a>
+    
+    <li ><a href="#method-i-list_action_explain">#list_action_explain</a>
+    
+    <li ><a href="#method-i-load_patchsets">#load_patchsets</a>
+    
+    <li ><a href="#method-i-login">#login</a>
+    
+    <li ><a href="#method-i-patch_action">#patch_action</a>
+    
+    <li ><a href="#method-i-patch_action_args">#patch_action_args</a>
+    
+    <li ><a href="#method-i-patch_action_explain">#patch_action_explain</a>
+    
+    <li ><a href="#method-i-post_action">#post_action</a>
+    
+    <li ><a href="#method-i-post_action_args">#post_action_args</a>
+    
+    <li ><a href="#method-i-post_action_explain">#post_action_explain</a>
+    
+    <li ><a href="#method-i-puts">#puts</a>
+    
+    <li ><a href="#method-i-regen_action">#regen_action</a>
+    
+    <li ><a href="#method-i-regen_action_args">#regen_action_args</a>
+    
+    <li ><a href="#method-i-regen_action_explain">#regen_action_explain</a>
+    
+    <li ><a href="#method-i-save_config">#save_config</a>
+    
+    <li ><a href="#method-i-setup">#setup</a>
+    
+    <li ><a href="#method-i-setup_blogs">#setup_blogs</a>
+    
+    <li ><a href="#method-i-setup_personal">#setup_personal</a>
+    
+    <li ><a href="#method-i-tabular">#tabular</a>
+    
+    <li ><a href="#method-i-tabular_entries">#tabular_entries</a>
+    
+    <li ><a href="#method-i-upgen_action">#upgen_action</a>
+    
+    <li ><a href="#method-i-upgen_action_args">#upgen_action_args</a>
+    
+    <li ><a href="#method-i-upgen_action_explain">#upgen_action_explain</a>
+    
+    <li ><a href="#method-i-upgrade_app">#upgrade_app</a>
+    
+    <li ><a href="#method-i-upgrade_app_args">#upgrade_app_args</a>
+    
+    <li ><a href="#method-i-upgrade_app_explain">#upgrade_app_explain</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-Hobix::CommandLine">
+  <h1 id="module-Hobix::CommandLine" class="module">
+    module Hobix::CommandLine
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="HOME_DIR">HOME_DIR
+        
+        <dd>
+        
+      
+        <dt id="RC">RC
+        
+        <dd>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-extended" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">extended</span><span
+            class="method-args">( o )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="extended-source">
+            <pre>   <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">39</span> <span class="ruby-keyword">def</span> <span class="ruby-constant">CommandLine</span>.<span class="ruby-identifier ruby-title">extended</span>( <span class="ruby-identifier">o</span> )
+<span class="line-num">40</span>   <span class="ruby-comment">#</span>
+<span class="line-num">41</span>   <span class="ruby-comment"># When extended we should get all required plugin for the</span>
+<span class="line-num">42</span>   <span class="ruby-comment"># whole Hobix stuff</span>
+<span class="line-num">43</span>   <span class="ruby-comment">#</span>
+<span class="line-num">44</span>   <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span> <span class="ruby-constant">RC</span>
+<span class="line-num">45</span> 
+<span class="line-num">46</span>   <span class="ruby-identifier">config</span> = <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-identifier">load</span>( <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-constant">RC</span> ) )
+<span class="line-num">47</span>   
+<span class="line-num">48</span>   <span class="ruby-comment">#</span>
+<span class="line-num">49</span>   <span class="ruby-comment"># Add a new instance variable to o</span>
+<span class="line-num">50</span>   <span class="ruby-comment">#</span>
+<span class="line-num">51</span>   <span class="ruby-identifier">o</span>.<span class="ruby-identifier">instance_variable_set</span>( <span class="ruby-value">:@config</span>, <span class="ruby-identifier">config</span> )
+<span class="line-num">52</span> 
+<span class="line-num">53</span>   <span class="ruby-comment">#</span>
+<span class="line-num">54</span>   <span class="ruby-comment"># Eventually add user specified path</span>
+<span class="line-num">55</span>   <span class="ruby-comment">#</span>
+<span class="line-num">56</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-string">&#39;libs&#39;</span>]
+<span class="line-num">57</span>     <span class="ruby-identifier">config</span>[<span class="ruby-string">&#39;libs&#39;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+<span class="line-num">58</span>       <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>( <span class="ruby-identifier">p</span> ) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>( <span class="ruby-identifier">p</span> )
+<span class="line-num">59</span>         <span class="ruby-identifier">$LOAD_PATH</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">p</span>
+<span class="line-num">60</span>       <span class="ruby-keyword">else</span>
+<span class="line-num">61</span>         <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{p} not loaded. Either inexistant or not a directory&quot;</span>
+<span class="line-num">62</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">63</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">64</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">65</span> 
+<span class="line-num">66</span>   <span class="ruby-comment">#</span>
+<span class="line-num">67</span>   <span class="ruby-comment"># And system wide path too</span>
+<span class="line-num">68</span>   <span class="ruby-comment">#</span>
+<span class="line-num">69</span>   <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>( <span class="ruby-constant">Hobix</span><span class="ruby-operator">::</span><span class="ruby-constant">SHARE_PATH</span> )
+<span class="line-num">70</span>     <span class="ruby-identifier">$LOAD_PATH</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">Hobix</span><span class="ruby-operator">::</span><span class="ruby-constant">SHARE_PATH</span>,<span class="ruby-string">&quot;lib&quot;</span>)
+<span class="line-num">71</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">72</span>   
+<span class="line-num">73</span>   <span class="ruby-comment">#</span>
+<span class="line-num">74</span>   <span class="ruby-comment"># Load plugins if necessary</span>
+<span class="line-num">75</span>   <span class="ruby-comment">#</span>
+<span class="line-num">76</span>   <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>[<span class="ruby-string">&#39;requires&#39;</span>]
+<span class="line-num">77</span>     <span class="ruby-identifier">config</span>[<span class="ruby-string">&#39;requires&#39;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">req</span><span class="ruby-operator">|</span>
+<span class="line-num">78</span>       <span class="ruby-constant">Hobix</span><span class="ruby-operator">::</span><span class="ruby-constant">BasePlugin</span><span class="ruby-operator">::</span><span class="ruby-identifier">start</span>( <span class="ruby-identifier">req</span>, <span class="ruby-keyword">self</span> )
+<span class="line-num">79</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">80</span>   <span class="ruby-keyword">end</span>
+<span class="line-num">81</span>   
+<span class="line-num">82</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-add_weblog" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_weblog</span><span
+            class="method-args">( name, path )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_weblog-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">220</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_weblog</span>( <span class="ruby-identifier">name</span>, <span class="ruby-identifier">path</span> )
+<span class="line-num">221</span>     <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;weblogs&#39;</span>] <span class="ruby-operator">||=</span> {}
+<span class="line-num">222</span>     <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>( <span class="ruby-identifier">path</span> )
+<span class="line-num">223</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;*** Checking for existence of blog.&quot;</span>
+<span class="line-num">224</span>     <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;hobix/weblog&#39;</span>
+<span class="line-num">225</span>     <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-identifier">path</span>
+<span class="line-num">226</span>         <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-identifier">path</span>, <span class="ruby-string">&#39;hobix.yaml&#39;</span> )
+<span class="line-num">227</span>         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;*** Path is a directory, using `#{ path }&#39;.&quot;</span>
+<span class="line-num">228</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">229</span>     <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span> <span class="ruby-identifier">path</span>
+<span class="line-num">230</span>         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;*** No file `#{ path }&#39; found!  Aborting.&quot;</span>
+<span class="line-num">231</span>         <span class="ruby-keyword">return</span>
+<span class="line-num">232</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">233</span>     <span class="ruby-identifier">join_as_author</span>( <span class="ruby-identifier">name</span>, <span class="ruby-identifier">path</span> )
+<span class="line-num">234</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-add_weblog_args" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_weblog_args</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_weblog_args-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">219</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_weblog_args</span>; [<span class="ruby-string">&#39;weblog-name&#39;</span>, <span class="ruby-string">&#39;/path/to/hobix.yaml&#39;</span>]; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-add_weblog_explain" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_weblog_explain</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Add a weblog to local config</p>
+          
+          
+
+          
+          <div class="method-source-code" id="add_weblog_explain-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">218</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_weblog_explain</span>; <span class="ruby-string">&quot;Adds a pre-existing hobix weblog to your list.&quot;</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-aorta" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">aorta</span><span
+            class="method-args">( obj )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="aorta-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">523</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">aorta</span>( <span class="ruby-identifier">obj</span> )
+<span class="line-num">524</span>     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;use editor&#39;</span>]
+<span class="line-num">525</span>         <span class="ruby-comment"># I am quite displeased that Tempfile.open eats its blocks result,</span>
+<span class="line-num">526</span>         <span class="ruby-comment"># thereby necessitating this blecherous construct...</span>
+<span class="line-num">527</span>         <span class="ruby-identifier">tempfile</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">528</span>         <span class="ruby-constant">Tempfile</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;hobix.post&quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">tempfile</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tempfile</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">to_yaml</span> }
+<span class="line-num">529</span>   
+<span class="line-num">530</span>         <span class="ruby-keyword">begin</span>
+<span class="line-num">531</span>             <span class="ruby-identifier">created</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">mtime</span>( <span class="ruby-identifier">tempfile</span>.<span class="ruby-identifier">path</span> )
+<span class="line-num">532</span>             <span class="ruby-identifier">system</span>( <span class="ruby-node">&quot;#{ ENV[&#39;EDITOR&#39;] || &#39;vi&#39; } #{ tempfile.path }&quot;</span> )
+<span class="line-num">533</span>             <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>( <span class="ruby-identifier">tempfile</span>.<span class="ruby-identifier">path</span> )
+<span class="line-num">534</span> 
+<span class="line-num">535</span>             <span class="ruby-keyword">if</span> <span class="ruby-identifier">created</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">mtime</span>( <span class="ruby-identifier">tempfile</span>.<span class="ruby-identifier">path</span> )
+<span class="line-num">536</span>                 <span class="ruby-identifier">obj</span> = <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-identifier">load</span>( <span class="ruby-identifier">tempfile</span>.<span class="ruby-identifier">open</span> )
+<span class="line-num">537</span>             <span class="ruby-keyword">else</span>
+<span class="line-num">538</span>                 <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;** Edit aborted&quot;</span>
+<span class="line-num">539</span>                 <span class="ruby-identifier">obj</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">540</span>             <span class="ruby-keyword">end</span>
+<span class="line-num">541</span>         <span class="ruby-keyword">rescue</span> <span class="ruby-constant">StandardError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+<span class="line-num">542</span>             <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;There was an error saving the entry: #{ e.class }: #{ e.message }&quot;</span>
+<span class="line-num">543</span>             <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;Re-edit [Yn]? &quot;</span>
+<span class="line-num">544</span>             <span class="ruby-identifier">response</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+<span class="line-num">545</span>             <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">response</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^[Yy]/</span>
+<span class="line-num">546</span>                 <span class="ruby-keyword">retry</span>
+<span class="line-num">547</span>             <span class="ruby-keyword">else</span>
+<span class="line-num">548</span>                 <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;** Edit aborted&quot;</span>
+<span class="line-num">549</span>                 <span class="ruby-identifier">obj</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">550</span>             <span class="ruby-keyword">end</span>
+<span class="line-num">551</span>         <span class="ruby-keyword">ensure</span>
+<span class="line-num">552</span>             <span class="ruby-comment"># tempfile will get closed/unlinked when it&#39;s collected anyway;</span>
+<span class="line-num">553</span>             <span class="ruby-comment"># may as well do it here to provide some determinism for the user</span>
+<span class="line-num">554</span>             <span class="ruby-keyword">begin</span>
+<span class="line-num">555</span>                 <span class="ruby-identifier">tempfile</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword">true</span>
+<span class="line-num">556</span>             <span class="ruby-keyword">rescue</span>
+<span class="line-num">557</span>             <span class="ruby-keyword">end</span>
+<span class="line-num">558</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">559</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">560</span>         <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;hobix/util/objedit&#39;</span>
+<span class="line-num">561</span>         <span class="ruby-identifier">obj</span> = <span class="ruby-constant">Hobix</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">ObjEdit</span>( <span class="ruby-identifier">obj</span> )
+<span class="line-num">562</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">563</span>     <span class="ruby-identifier">obj</span>
+<span class="line-num">564</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-blogs_weblog" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">blogs_weblog</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="blogs_weblog-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">129</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">blogs_weblog</span>
+<span class="line-num">130</span>     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;weblogs&#39;</span>].<span class="ruby-identifier">respond_to?</span>( <span class="ruby-value">:sort</span> ) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;weblogs&#39;</span>].<span class="ruby-identifier">empty?</span>
+<span class="line-num">131</span>         <span class="ruby-identifier">blogs</span> = <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;weblogs&#39;</span>].<span class="ruby-identifier">sort</span>
+<span class="line-num">132</span>         <span class="ruby-identifier">name_width</span> = <span class="ruby-identifier">blogs</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">b</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">length</span> }.<span class="ruby-identifier">max</span>
+<span class="line-num">133</span>         <span class="ruby-identifier">tabular</span>( <span class="ruby-identifier">blogs</span>, [[<span class="ruby-operator">-</span><span class="ruby-identifier">name_width</span>, <span class="ruby-value">0</span>, <span class="ruby-string">&#39;weblog-name&#39;</span>], [<span class="ruby-value">-40</span>, <span class="ruby-value">1</span>, <span class="ruby-string">&#39;path&#39;</span>]] )
+<span class="line-num">134</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">135</span>         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;** You have no blogs set up.  Use `hobix setup_blogs&#39; to get started.&quot;</span>
+<span class="line-num">136</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">137</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-blogs_weblog_args" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">blogs_weblog_args</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="blogs_weblog_args-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">128</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">blogs_weblog_args</span>; []; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-blogs_weblog_explain" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">blogs_weblog_explain</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>List all your weblogs</p>
+          
+          
+
+          
+          <div class="method-source-code" id="blogs_weblog_explain-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">127</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">blogs_weblog_explain</span>; <span class="ruby-string">&quot;List your weblogs.&quot;</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-config" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">config</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="config-source">
+            <pre>   <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">94</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">config</span>
+<span class="line-num">95</span>     <span class="ruby-ivar">@config</span>
+<span class="line-num">96</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-create_weblog" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_weblog</span><span
+            class="method-args">( name, path )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_weblog-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">146</span>     <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_weblog</span>( <span class="ruby-identifier">name</span>, <span class="ruby-identifier">path</span> )
+<span class="line-num">147</span>         <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;weblogs&#39;</span>] <span class="ruby-operator">||=</span> {}
+<span class="line-num">148</span>         <span class="ruby-keyword">if</span> <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;weblogs&#39;</span>][<span class="ruby-identifier">name</span>]
+<span class="line-num">149</span>             <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;*** Blog &#39;#{ name }&#39; exists already! Overwrite?? [y/N]: &quot;</span>
+<span class="line-num">150</span>             <span class="ruby-keyword">if</span> <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">upcase</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;Y&#39;</span>
+<span class="line-num">151</span>                 <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;*** Creation of weblog `#{ name }&#39; aborted.&quot;</span>
+<span class="line-num">152</span>                 <span class="ruby-keyword">return</span>
+<span class="line-num">153</span>             <span class="ruby-keyword">end</span>
+<span class="line-num">154</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">155</span>         <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>( <span class="ruby-identifier">path</span> )
+<span class="line-num">156</span>         <span class="ruby-identifier">puts</span> <span class="ruby-identifier">&lt;&lt;-NOTE</span>
+<span class="line-num">157</span> <span class="ruby-value">        |*** Creation of weblog `#{ name }&#39; will add the following directory&quot;
+<span class="line-num">158</span>         |    structure to directory #{ path }&quot;
+<span class="line-num">159</span>         |
+<span class="line-num">160</span>         |    #{ path }
+<span class="line-num">161</span>         |       hobix.yaml &lt;- configuration
+<span class="line-num">162</span>         |       
+<span class="line-num">163</span>         |       entries/   &lt;- edit and organize
+<span class="line-num">164</span>         |                     your news items,
+<span class="line-num">165</span>         |                     articles and so on.
+<span class="line-num">166</span>         |       
+<span class="line-num">167</span>         |       skel/      &lt;- contains your
+<span class="line-num">168</span>         |                     templates
+<span class="line-num">169</span>         |       
+<span class="line-num">170</span>         |       htdocs/    &lt;- html is created here,
+<span class="line-num">171</span>         |                     store all your images here,
+<span class="line-num">172</span>         |                     this is your viewable
+<span class="line-num">173</span>         |                     websyht
+<span class="line-num">174</span>         |       
+<span class="line-num">175</span>         |       lib/       &lt;- extra hobix libraries
+<span class="line-num">176</span>         |                     (plugins) go here
+<span class="line-num">177</span>         |
+<span class="line-num">178</span> </span><span class="ruby-identifier">        NOTE</span>
+<span class="line-num">179</span>         <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;Create this structure? [y/N]: &quot;</span>
+<span class="line-num">180</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">upcase</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;Y&#39;</span>
+<span class="line-num">181</span>             <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;*** Creation of weblog `#{ name }&#39; aborted.&quot;</span>
+<span class="line-num">182</span>             <span class="ruby-keyword">return</span>
+<span class="line-num">183</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">184</span> 
+<span class="line-num">185</span>         <span class="ruby-identifier">modes</span> = <span class="ruby-identifier">load_patchsets</span>
+<span class="line-num">186</span> 
+<span class="line-num">187</span>         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;The default blog is available in the following modes:&quot;</span>
+<span class="line-num">188</span>         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;  #{ modes.keys.join( &#39;, &#39; ) }&quot;</span>
+<span class="line-num">189</span>         <span class="ruby-identifier">puts</span>
+<span class="line-num">190</span>         <span class="ruby-identifier">mode</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">191</span>         <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+<span class="line-num">192</span>             <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;Modes: [Comma between each mode or Enter for none] &quot;</span>
+<span class="line-num">193</span>             <span class="ruby-identifier">mode</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>
+<span class="line-num">194</span>             <span class="ruby-identifier">m</span> = <span class="ruby-identifier">mode</span>
+<span class="line-num">195</span>             <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">mode</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">or</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">mode</span>.<span class="ruby-identifier">split</span>( <span class="ruby-regexp">/,/</span> ).<span class="ruby-identifier">detect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">strip!</span>; <span class="ruby-keyword">not</span> <span class="ruby-identifier">modes</span>.<span class="ruby-identifier">has_key?</span>( <span class="ruby-identifier">m</span> ) }
+<span class="line-num">196</span>             <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;*** No `#{ m }&#39; mode available.&quot;</span>
+<span class="line-num">197</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">198</span> 
+<span class="line-num">199</span>         <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;fileutils&#39;</span>
+<span class="line-num">200</span>         <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">makedirs</span> <span class="ruby-identifier">path</span>
+<span class="line-num">201</span>         <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">cp_r</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>( <span class="ruby-node">&quot;#{ Hobix::SHARE_PATH }/default-blog/*&quot;</span> ), <span class="ruby-identifier">path</span>
+<span class="line-num">202</span> 
+<span class="line-num">203</span>         <span class="ruby-comment"># apply any patches</span>
+<span class="line-num">204</span>         <span class="ruby-identifier">patchlist</span> = <span class="ruby-identifier">mode</span>.<span class="ruby-identifier">split</span>( <span class="ruby-regexp">/,/</span> ).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-identifier">modes</span>[<span class="ruby-identifier">m</span>.<span class="ruby-identifier">strip</span>] }.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">uniq</span>
+<span class="line-num">205</span>         <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;hobix/util/patcher&#39;</span>
+<span class="line-num">206</span>         <span class="ruby-identifier">patchlist</span>.<span class="ruby-identifier">collect!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{ Hobix::SHARE_PATH }/default-blog.#{ p }.patch&quot;</span> }
+<span class="line-num">207</span>         <span class="ruby-identifier">patcher</span> = <span class="ruby-constant">Hobix</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Patcher</span>[ <span class="ruby-operator">*</span><span class="ruby-identifier">patchlist</span> ]
+<span class="line-num">208</span>         <span class="ruby-identifier">patcher</span>.<span class="ruby-identifier">apply</span>( <span class="ruby-identifier">path</span> )
+<span class="line-num">209</span> 
+<span class="line-num">210</span>         <span class="ruby-identifier">hobix_yaml</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>( <span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;hobix.yaml&quot;</span> )
+<span class="line-num">211</span>         <span class="ruby-identifier">join_as_author</span>( <span class="ruby-identifier">name</span>, <span class="ruby-identifier">hobix_yaml</span> )
+<span class="line-num">212</span>         <span class="ruby-identifier">weblog</span> = <span class="ruby-constant">Hobix</span><span class="ruby-operator">::</span><span class="ruby-constant">Weblog</span>.<span class="ruby-identifier">load</span>( <span class="ruby-identifier">hobix_yaml</span> )
+<span class="line-num">213</span>         <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">setup</span>
+<span class="line-num">214</span>         <span class="ruby-identifier">edit_action</span>( <span class="ruby-identifier">weblog</span> )
+<span class="line-num">215</span>     <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-create_weblog_args" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_weblog_args</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create_weblog_args-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">145</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_weblog_args</span>; [<span class="ruby-string">&#39;weblog-name&#39;</span>, <span class="ruby-string">&#39;/path/to/&#39;</span>]; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-create_weblog_explain" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create_weblog_explain</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Create a new skeleton for a weblog</p>
+          
+          
+
+          
+          <div class="method-source-code" id="create_weblog_explain-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">144</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_weblog_explain</span>; <span class="ruby-string">&quot;Create a brand new weblog.&quot;</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-del_weblog" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">del_weblog</span><span
+            class="method-args">( name )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="del_weblog-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">272</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">del_weblog</span>( <span class="ruby-identifier">name</span> )
+<span class="line-num">273</span>     <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;weblogs&#39;</span>] <span class="ruby-operator">||=</span> {}
+<span class="line-num">274</span>     <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;weblogs&#39;</span>].<span class="ruby-identifier">delete</span>( <span class="ruby-identifier">name</span> )
+<span class="line-num">275</span>     <span class="ruby-identifier">save_config</span>
+<span class="line-num">276</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-del_weblog_args" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">del_weblog_args</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="del_weblog_args-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">271</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">del_weblog_args</span>; [<span class="ruby-string">&#39;weblog-name&#39;</span>]; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-del_weblog_explain" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">del_weblog_explain</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Delete a weblog from local config</p>
+          
+          
+
+          
+          <div class="method-source-code" id="del_weblog_explain-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">270</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">del_weblog_explain</span>; <span class="ruby-string">&quot;Remove weblog from your list.&quot;</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-druby_weblog" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">druby_weblog</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="druby_weblog-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">281</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">druby_weblog</span>
+<span class="line-num">282</span>     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;weblogs&#39;</span>]
+<span class="line-num">283</span>         <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;druby&#39;</span>]
+<span class="line-num">284</span>             <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;druby&#39;</span>] = <span class="ruby-string">&#39;druby://:4081&#39;</span>
+<span class="line-num">285</span>             <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;** No drb url found, using #{ @config[&#39;druby&#39;] }&quot;</span>
+<span class="line-num">286</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">287</span>         <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;drb&#39;</span>
+<span class="line-num">288</span>         <span class="ruby-identifier">blogs</span> = {}
+<span class="line-num">289</span>         <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;weblogs&#39;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+<span class="line-num">290</span>             <span class="ruby-identifier">blogs</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-constant">Hobix</span><span class="ruby-operator">::</span><span class="ruby-constant">Weblog</span>.<span class="ruby-identifier">load</span> <span class="ruby-identifier">path</span>
+<span class="line-num">291</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">292</span>         <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;hobix/api&#39;</span>
+<span class="line-num">293</span>         <span class="ruby-identifier">api</span> = <span class="ruby-constant">Hobix</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">blogs</span>
+<span class="line-num">294</span>         <span class="ruby-constant">DRb</span>.<span class="ruby-identifier">start_service</span> <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;druby&#39;</span>], <span class="ruby-identifier">api</span>
+<span class="line-num">295</span>         <span class="ruby-constant">DRb</span>.<span class="ruby-identifier">thread</span>.<span class="ruby-identifier">join</span>
+<span class="line-num">296</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">297</span>         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;** No blogs found in the configuration.&quot;</span>
+<span class="line-num">298</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">299</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-druby_weblog_args" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">druby_weblog_args</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="druby_weblog_args-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">280</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">druby_weblog_args</span>; []; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-druby_weblog_explain" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">druby_weblog_explain</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Run a DRuby daemon for blogs in your configuration</p>
+          
+          
+
+          
+          <div class="method-source-code" id="druby_weblog_explain-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">279</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">druby_weblog_explain</span>; <span class="ruby-string">&quot;Start the DRuby daemon for weblogs in your config.&quot;</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-edit_action" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit_action</span><span
+            class="method-args">( weblog )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit_action-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">262</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">edit_action</span>( <span class="ruby-identifier">weblog</span> )
+<span class="line-num">263</span>     <span class="ruby-identifier">path</span> = <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">hobix_yaml</span>
+<span class="line-num">264</span>     <span class="ruby-identifier">weblog</span> = <span class="ruby-identifier">aorta</span>( <span class="ruby-identifier">weblog</span> )
+<span class="line-num">265</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">nil?</span>
+<span class="line-num">266</span>     <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">save</span>( <span class="ruby-identifier">path</span> )
+<span class="line-num">267</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-edit_action_args" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit_action_args</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit_action_args-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">261</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">edit_action_args</span>; [<span class="ruby-string">&#39;weblog-name&#39;</span>]; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-edit_action_explain" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit_action_explain</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Edit a weblog from local config</p>
+          
+          
+
+          
+          <div class="method-source-code" id="edit_action_explain-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">260</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">edit_action_explain</span>; <span class="ruby-string">&quot;Edit weblog&#39;s configuration&quot;</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-gets" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">gets</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="gets-source">
+            <pre>   <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">84</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">gets</span>;          <span class="ruby-identifier">$stdin</span>.<span class="ruby-identifier">gets</span>;          <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-http" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">http</span><span
+            class="method-args">( *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="../Hobix.html"><code>Hobix</code></a> over the wire</p>
+          
+          
+
+          
+          <div class="method-source-code" id="http-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">596</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">http</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+<span class="line-num">597</span>     <span class="ruby-identifier">p</span> <span class="ruby-identifier">http_get</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+<span class="line-num">598</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-http_edit_remote" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">http_edit_remote</span><span
+            class="method-args">( weblog )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="http_edit_remote-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">644</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">http_edit_remote</span>( <span class="ruby-identifier">weblog</span> )
+<span class="line-num">645</span>     <span class="ruby-identifier">config</span> = <span class="ruby-identifier">http_get</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-string">&quot;edit&quot;</span> )
+<span class="line-num">646</span>     <span class="ruby-identifier">config</span> = <span class="ruby-identifier">aorta</span>( <span class="ruby-identifier">config</span> )
+<span class="line-num">647</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">config</span>.<span class="ruby-identifier">nil?</span>
+<span class="line-num">648</span>     <span class="ruby-identifier">p</span> <span class="ruby-identifier">http_post</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-string">&quot;edit&quot;</span>, <span class="ruby-identifier">config</span> )
+<span class="line-num">649</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-http_get" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">http_get</span><span
+            class="method-args">( weblog, *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="http_get-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">600</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">http_get</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+<span class="line-num">601</span>     <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;net/http&#39;</span>
+<span class="line-num">602</span>     <span class="ruby-identifier">response</span> =
+<span class="line-num">603</span>         <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">port</span> ).<span class="ruby-identifier">start</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">http</span><span class="ruby-operator">|</span>
+<span class="line-num">604</span>             <span class="ruby-identifier">http</span>.<span class="ruby-identifier">get</span>( <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>( <span class="ruby-node">&quot;remote/#{ args.join &#39;/&#39; }&quot;</span>, <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">path</span> ) )
+<span class="line-num">605</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">606</span>     <span class="ruby-keyword">case</span> <span class="ruby-identifier">response</span>
+<span class="line-num">607</span>     <span class="ruby-keyword">when</span> <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTPSuccess</span>     <span class="ruby-keyword">then</span> <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-identifier">load</span>( <span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span> )
+<span class="line-num">608</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">609</span>       <span class="ruby-identifier">response</span>.<span class="ruby-identifier">error!</span>
+<span class="line-num">610</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">611</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-http_list_remote" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">http_list_remote</span><span
+            class="method-args">( weblog, inpath = &#39;&#39; )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="http_list_remote-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">651</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">http_list_remote</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-identifier">inpath</span> = <span class="ruby-string">&#39;&#39;</span> )
+<span class="line-num">652</span>     <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;hobix/storage/filesys&#39;</span>
+<span class="line-num">653</span>     <span class="ruby-identifier">entries</span> = <span class="ruby-identifier">http_get</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-string">&#39;list&#39;</span>, <span class="ruby-identifier">inpath</span> )
+<span class="line-num">654</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">empty?</span>
+<span class="line-num">655</span>         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;** No posts found in the weblog for path &#39;#{inpath}&#39;.&quot;</span>
+<span class="line-num">656</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">657</span>         <span class="ruby-identifier">tabular_entries</span>( <span class="ruby-identifier">entries</span> )
+<span class="line-num">658</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">659</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-http_patch_remote" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">http_patch_remote</span><span
+            class="method-args">( *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="http_patch_remote-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">671</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">http_patch_remote</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+<span class="line-num">672</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;** Weblogs cannot be patched over the wire yet.&quot;</span>
+<span class="line-num">673</span>     <span class="ruby-identifier">exit</span>
+<span class="line-num">674</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-http_post" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">http_post</span><span
+            class="method-args">( weblog, url, obj )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="http_post-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">613</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">http_post</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">obj</span> )
+<span class="line-num">614</span>     <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;net/http&#39;</span>
+<span class="line-num">615</span>     <span class="ruby-identifier">response</span> =
+<span class="line-num">616</span>         <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">port</span> ).<span class="ruby-identifier">start</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">http</span><span class="ruby-operator">|</span>
+<span class="line-num">617</span>             <span class="ruby-identifier">http</span>.<span class="ruby-identifier">post</span>( <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>( <span class="ruby-node">&quot;remote/#{ url }&quot;</span>, <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">path</span> ), <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">to_yaml</span>, <span class="ruby-string">&quot;Content-Type&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;text/yaml&quot;</span> )
+<span class="line-num">618</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">619</span>     <span class="ruby-keyword">case</span> <span class="ruby-identifier">response</span>
+<span class="line-num">620</span>     <span class="ruby-keyword">when</span> <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTPSuccess</span>     <span class="ruby-keyword">then</span> <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-identifier">load</span>( <span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span> )
+<span class="line-num">621</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">622</span>       <span class="ruby-identifier">response</span>.<span class="ruby-identifier">error!</span>
+<span class="line-num">623</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">624</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-http_post_remote" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">http_post_remote</span><span
+            class="method-args">( weblog, entry_id )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="http_post_remote-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">626</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">http_post_remote</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-identifier">entry_id</span> )
+<span class="line-num">627</span>     <span class="ruby-identifier">entry</span> = <span class="ruby-identifier">http_get</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-string">&quot;post&quot;</span>, <span class="ruby-identifier">entry_id</span> )
+<span class="line-num">628</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+<span class="line-num">629</span>         <span class="ruby-identifier">entry</span> = <span class="ruby-identifier">http_get</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-string">&#39;new&#39;</span> )
+<span class="line-num">630</span>         <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">author</span> = <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;username&#39;</span>]
+<span class="line-num">631</span>         <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">entry_id</span>.<span class="ruby-identifier">split</span>( <span class="ruby-string">&#39;/&#39;</span> ).
+<span class="line-num">632</span>                                <span class="ruby-identifier">last</span>.
+<span class="line-num">633</span>                                <span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/^\w|_\w|[A-Z]/</span> ) { <span class="ruby-operator">|</span><span class="ruby-identifier">up</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot; #{up[-1, 1].upcase}&quot;</span> }.
+<span class="line-num">634</span>                                <span class="ruby-identifier">strip</span>
+<span class="line-num">635</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">636</span>     <span class="ruby-identifier">entry</span> = <span class="ruby-identifier">aorta</span>( <span class="ruby-identifier">entry</span> )
+<span class="line-num">637</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">nil?</span>
+<span class="line-num">638</span> 
+<span class="line-num">639</span>     <span class="ruby-identifier">rsp</span> = <span class="ruby-identifier">http_post</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-node">&quot;post/#{ entry_id }&quot;</span>, <span class="ruby-identifier">entry</span> )
+<span class="line-num">640</span>     <span class="ruby-identifier">http_get</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-string">&quot;upgen&quot;</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;post upgen&#39;</span>]
+<span class="line-num">641</span>     <span class="ruby-identifier">p</span> <span class="ruby-identifier">rsp</span>
+<span class="line-num">642</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-http_search_remote" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">http_search_remote</span><span
+            class="method-args">( weblog, words, inpath = &#39;&#39; )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="http_search_remote-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">661</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">http_search_remote</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-identifier">words</span>, <span class="ruby-identifier">inpath</span> = <span class="ruby-string">&#39;&#39;</span> )
+<span class="line-num">662</span>     <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;hobix/storage/filesys&#39;</span>
+<span class="line-num">663</span>     <span class="ruby-identifier">entries</span> = <span class="ruby-identifier">http_get</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-string">&#39;search&#39;</span>, <span class="ruby-identifier">words</span>, <span class="ruby-identifier">inpath</span> )
+<span class="line-num">664</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">empty?</span>
+<span class="line-num">665</span>         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;** No posts found in the weblog for path &#39;#{inpath}&#39;.&quot;</span>
+<span class="line-num">666</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">667</span>         <span class="ruby-identifier">tabular_entries</span>( <span class="ruby-identifier">entries</span> )
+<span class="line-num">668</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">669</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-join_as_author" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">join_as_author</span><span
+            class="method-args">( name, path )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="join_as_author-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">236</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">join_as_author</span>( <span class="ruby-identifier">name</span>, <span class="ruby-identifier">path</span> )
+<span class="line-num">237</span>     <span class="ruby-identifier">weblog</span> = <span class="ruby-constant">Hobix</span><span class="ruby-operator">::</span><span class="ruby-constant">Weblog</span>.<span class="ruby-identifier">load</span>( <span class="ruby-identifier">path</span> )
+<span class="line-num">238</span>     <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;*** Joining blog `#{ weblog.title }&#39;, adding you as author.&quot;</span>
+<span class="line-num">239</span>     <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">authors</span>[<span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;username&#39;</span>]] = <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;personal&#39;</span>]
+<span class="line-num">240</span>     <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">save</span>( <span class="ruby-identifier">path</span> )
+<span class="line-num">241</span>     <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;weblogs&#39;</span>][<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">path</span>
+<span class="line-num">242</span>     <span class="ruby-identifier">save_config</span>
+<span class="line-num">243</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-list_action" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">list_action</span><span
+            class="method-args">( weblog, inpath = &#39;&#39; )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="list_action-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">315</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">list_action</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-identifier">inpath</span> = <span class="ruby-string">&#39;&#39;</span> )
+<span class="line-num">316</span>     <span class="ruby-identifier">entries</span> = <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">storage</span>.<span class="ruby-identifier">find</span>( <span class="ruby-value">:all</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>, <span class="ruby-value">:inpath</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">inpath</span> )
+<span class="line-num">317</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">empty?</span>
+<span class="line-num">318</span>         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;** No posts found in the weblog for path &#39;#{inpath}&#39;.&quot;</span>
+<span class="line-num">319</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">320</span>         <span class="ruby-identifier">tabular_entries</span>( <span class="ruby-identifier">entries</span> )
+<span class="line-num">321</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">322</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-list_action_args" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">list_action_args</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="list_action_args-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">314</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">list_action_args</span>; [<span class="ruby-string">&#39;weblog-name&#39;</span>, <span class="ruby-string">&#39;search/path&#39;</span>]; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-list_action_explain" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">list_action_explain</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>List entries</p>
+          
+          
+
+          
+          <div class="method-source-code" id="list_action_explain-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">313</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">list_action_explain</span>; <span class="ruby-string">&quot;List all posts within a given path.&quot;</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-load_patchsets" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load_patchsets</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="load_patchsets-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">139</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">load_patchsets</span>
+<span class="line-num">140</span>     <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-node">&quot;#{ Hobix::SHARE_PATH }/default-blog-modes.yaml&quot;</span> ) { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-identifier">load</span>( <span class="ruby-identifier">f</span> ) }
+<span class="line-num">141</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-login" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">login</span><span
+            class="method-args">( config = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="login-source">
+            <pre>   <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">87</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">login</span>( <span class="ruby-identifier">config</span> = <span class="ruby-keyword">nil</span> )
+<span class="line-num">88</span>     <span class="ruby-identifier">config</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">RC</span>
+<span class="line-num">89</span>     <span class="ruby-ivar">@config</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-identifier">config</span> ) { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-identifier">load</span>( <span class="ruby-identifier">f</span> ) } <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span> <span class="ruby-constant">RC</span>
+<span class="line-num">90</span>     <span class="ruby-identifier">setup</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@config</span>
+<span class="line-num">91</span>     <span class="ruby-identifier">setup_personal</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;personal&#39;</span>]
+<span class="line-num">92</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-patch_action" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">patch_action</span><span
+            class="method-args">( weblog, patch )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="patch_action-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">304</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">patch_action</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-identifier">patch</span> )
+<span class="line-num">305</span>     <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;hobix/util/patcher&#39;</span>
+<span class="line-num">306</span>     <span class="ruby-identifier">modes</span> = <span class="ruby-identifier">load_patchsets</span>
+<span class="line-num">307</span>     <span class="ruby-identifier">patchlist</span> = <span class="ruby-identifier">modes</span>[<span class="ruby-identifier">patch</span>.<span class="ruby-identifier">strip</span>].<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{ Hobix::SHARE_PATH }/default-blog.#{ p }.patch&quot;</span> }
+<span class="line-num">308</span>     <span class="ruby-identifier">patcher</span> = <span class="ruby-constant">Hobix</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">Patcher</span>[ <span class="ruby-operator">*</span><span class="ruby-identifier">patchlist</span> ]
+<span class="line-num">309</span>     <span class="ruby-identifier">patcher</span>.<span class="ruby-identifier">apply</span>( <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">path</span> )
+<span class="line-num">310</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-patch_action_args" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">patch_action_args</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="patch_action_args-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">303</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">patch_action_args</span>; [<span class="ruby-string">&#39;weblog-name&#39;</span>, <span class="ruby-string">&#39;patch-name&#39;</span>]; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-patch_action_explain" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">patch_action_explain</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Patch a weblog</p>
+          
+          
+
+          
+          <div class="method-source-code" id="patch_action_explain-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">302</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">patch_action_explain</span>; <span class="ruby-string">&quot;Applies a patch to a weblog.&quot;</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-post_action" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">post_action</span><span
+            class="method-args">( weblog, *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="post_action-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">342</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">post_action</span>( <span class="ruby-identifier">weblog</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> )
+<span class="line-num">343</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+<span class="line-num">344</span>         <span class="ruby-identifier">entry_type</span> = <span class="ruby-keyword">nil</span>
+<span class="line-num">345</span>         <span class="ruby-identifier">entry_id</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>]
+<span class="line-num">346</span>     <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+<span class="line-num">347</span>         ( <span class="ruby-identifier">entry_type</span>, <span class="ruby-identifier">entry_id</span> ) = <span class="ruby-identifier">args</span>
+<span class="line-num">348</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">349</span>         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Wrong number of arguments&quot;</span>
+<span class="line-num">350</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">351</span>     
+<span class="line-num">352</span>     <span class="ruby-identifier">entry_class</span> = <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">entry_class</span>(<span class="ruby-identifier">entry_type</span>)
+<span class="line-num">353</span>     <span class="ruby-keyword">begin</span>
+<span class="line-num">354</span>         <span class="ruby-identifier">entry</span> = <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">storage</span>.<span class="ruby-identifier">load_entry</span>( <span class="ruby-identifier">entry_id</span> )
+<span class="line-num">355</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">entry_type</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">instance_of?</span> <span class="ruby-identifier">entry_class</span>
+<span class="line-num">356</span>             <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;#{entry_id} already exists with a different type (#{entry.class})&quot;</span>
+<span class="line-num">357</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">358</span>     <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+<span class="line-num">359</span>         <span class="ruby-identifier">entry</span> = <span class="ruby-identifier">entry_class</span>.<span class="ruby-identifier">new</span>
+<span class="line-num">360</span>         <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">author</span> = <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;username&#39;</span>]
+<span class="line-num">361</span>         <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">entry_id</span>.<span class="ruby-identifier">split</span>( <span class="ruby-string">&#39;/&#39;</span> ).
+<span class="line-num">362</span>                                <span class="ruby-identifier">last</span>.
+<span class="line-num">363</span>                                <span class="ruby-identifier">gsub</span>( <span class="ruby-regexp">/^\w|\W\w|_\w|[A-Z]/</span> ) { <span class="ruby-operator">|</span><span class="ruby-identifier">up</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot; #{up[-1, 1].upcase}&quot;</span> }.
+<span class="line-num">364</span>                                <span class="ruby-identifier">strip</span>
+<span class="line-num">365</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">366</span>     <span class="ruby-identifier">entry</span> = <span class="ruby-identifier">aorta</span>( <span class="ruby-identifier">entry</span> )
+<span class="line-num">367</span>     <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">nil?</span>
+<span class="line-num">368</span> 
+<span class="line-num">369</span>     <span class="ruby-keyword">begin</span>
+<span class="line-num">370</span>         <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">storage</span>.<span class="ruby-identifier">save_entry</span>( <span class="ruby-identifier">entry_id</span>, <span class="ruby-identifier">entry</span> )
+<span class="line-num">371</span>     <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+<span class="line-num">372</span>         <span class="ruby-identifier">puts</span>
+<span class="line-num">373</span>         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;The category for #{entry_id} doesn&#39;t exist.&quot;</span>
+<span class="line-num">374</span>         <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;Create it [Yn]? &quot;</span>
+<span class="line-num">375</span>         <span class="ruby-identifier">response</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+<span class="line-num">376</span> 
+<span class="line-num">377</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">response</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^[Yy]/</span>
+<span class="line-num">378</span>             <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">storage</span>.<span class="ruby-identifier">save_entry</span>( <span class="ruby-identifier">entry_id</span>, <span class="ruby-identifier">entry</span>, <span class="ruby-keyword">true</span> )
+<span class="line-num">379</span>         <span class="ruby-keyword">else</span>
+<span class="line-num">380</span>             <span class="ruby-identifier">puts</span>
+<span class="line-num">381</span>             <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;Supply a different shortName [&lt;Enter&gt; to discard post]: &quot;</span>
+<span class="line-num">382</span>             <span class="ruby-identifier">response</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+<span class="line-num">383</span> 
+<span class="line-num">384</span>             <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">empty?</span>
+<span class="line-num">385</span>                 <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+<span class="line-num">386</span>             <span class="ruby-keyword">else</span>
+<span class="line-num">387</span>                 <span class="ruby-identifier">entry_id</span> = <span class="ruby-identifier">response</span>
+<span class="line-num">388</span>                 <span class="ruby-keyword">retry</span>
+<span class="line-num">389</span>             <span class="ruby-keyword">end</span>
+<span class="line-num">390</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">391</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">392</span>     <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">regenerate</span>( <span class="ruby-value">:update</span> ) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;post upgen&#39;</span>]
+<span class="line-num">393</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-post_action_args" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">post_action_args</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="post_action_args-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">341</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">post_action_args</span>; [<span class="ruby-string">&#39;weblog-name&#39;</span>, <span class="ruby-string">&#39;[type]&#39;</span>, <span class="ruby-string">&#39;shortName&#39;</span>]; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-post_action_explain" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">post_action_explain</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Post a new entry</p>
+          
+          
+
+          
+          <div class="method-source-code" id="post_action_explain-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">337</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">post_action_explain</span>; <span class="ruby-string">&quot;Add or edit a post with identifier &#39;shortName&#39;.\n&quot;</span> <span class="ruby-operator">+</span>
+<span class="line-num">338</span>     <span class="ruby-string">&quot;(You can use full paths. &#39;blog/weddings/anotherPatheticWedding&#39;)\n&quot;</span> <span class="ruby-operator">+</span>
+<span class="line-num">339</span>     <span class="ruby-string">&quot;&#39;type&#39; specifies the type of entry to create if the entry does not\n&quot;</span> <span class="ruby-operator">+</span>
+<span class="line-num">340</span>     <span class="ruby-string">&quot;already exist.&quot;</span> ; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-puts" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">puts</span><span
+            class="method-args">( *args )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="puts-source">
+            <pre>   <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">85</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">puts</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> ); <span class="ruby-identifier">$stdin</span>.<span class="ruby-identifier">puts</span>( <span class="ruby-operator">*</span><span class="ruby-identifier">args</span> ); <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-regen_action" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">regen_action</span><span
+            class="method-args">( weblog )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="regen_action-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">255</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">regen_action</span>( <span class="ruby-identifier">weblog</span> )
+<span class="line-num">256</span>     <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">regenerate</span>
+<span class="line-num">257</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-regen_action_args" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">regen_action_args</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="regen_action_args-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">254</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">regen_action_args</span>; [<span class="ruby-string">&#39;weblog-name&#39;</span>]; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-regen_action_explain" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">regen_action_explain</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Regenerate the site</p>
+          
+          
+
+          
+          <div class="method-source-code" id="regen_action_explain-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">253</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">regen_action_explain</span>; <span class="ruby-string">&quot;Regenerate the all the pages throughout the site.&quot;</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-save_config" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">save_config</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="save_config-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num"> 98</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">save_config</span>
+<span class="line-num"> 99</span>     <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>( <span class="ruby-constant">RC</span>, <span class="ruby-string">&quot;w&quot;</span> ) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+<span class="line-num">100</span>         <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span> <span class="ruby-ivar">@config</span>.<span class="ruby-identifier">to_yaml</span>
+<span class="line-num">101</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">102</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-setup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Setup user&#39;s <a href="CommandLine.html#RC"><code>RC</code></a></p>
+          
+          
+
+          
+          <div class="method-source-code" id="setup-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">398</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">setup</span>
+<span class="line-num">399</span>     <span class="ruby-ivar">@config</span> = {}
+<span class="line-num">400</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Welcome to hobix (a simple weblog tool).  Looks like your&quot;</span> 
+<span class="line-num">401</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;first time running hobix, eh?  Time to get a bit of information&quot;</span>
+<span class="line-num">402</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;from you before you start using hobix.  (All of this will be stored&quot;</span>
+<span class="line-num">403</span>     <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;in the file #{ Hobix::CommandLine::RC } if you need to edit.)&quot;</span>
+<span class="line-num">404</span>     <span class="ruby-identifier">puts</span>
+<span class="line-num">405</span> 
+<span class="line-num">406</span>     <span class="ruby-identifier">username</span> = <span class="ruby-string">&#39;&#39;</span>
+<span class="line-num">407</span>     <span class="ruby-identifier">default_user</span> = <span class="ruby-string">&#39;&#39;</span>
+<span class="line-num">408</span>     <span class="ruby-identifier">user_prompt</span> = <span class="ruby-string">&#39;Your hobix username&#39;</span>
+<span class="line-num">409</span>     <span class="ruby-keyword">if</span> <span class="ruby-constant">ENV</span>[<span class="ruby-string">&#39;USER&#39;</span>]
+<span class="line-num">410</span>         <span class="ruby-identifier">default_user</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&#39;USER&#39;</span>]
+<span class="line-num">411</span>         <span class="ruby-identifier">user_prompt</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; [&lt;Enter&gt; for #{ ENV[&#39;USER&#39;] }]&quot;</span>
+<span class="line-num">412</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">413</span>     <span class="ruby-keyword">while</span> <span class="ruby-identifier">username</span>.<span class="ruby-identifier">empty?</span>
+<span class="line-num">414</span>         <span class="ruby-identifier">puts</span>
+<span class="line-num">415</span>         <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;#{ user_prompt }: &quot;</span>
+<span class="line-num">416</span>         <span class="ruby-identifier">username</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+<span class="line-num">417</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">username</span>.<span class="ruby-identifier">empty?</span>
+<span class="line-num">418</span>             <span class="ruby-identifier">username</span> = <span class="ruby-identifier">default_user</span>
+<span class="line-num">419</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">420</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">421</span>     <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;username&#39;</span>] = <span class="ruby-identifier">username</span>
+<span class="line-num">422</span> 
+<span class="line-num">423</span>     <span class="ruby-identifier">puts</span>
+<span class="line-num">424</span>     <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Your EDITOR environment variable is set to &#39;#{ ENV[&#39;EDITOR&#39;] }&#39;.&quot;</span>
+<span class="line-num">425</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;You can edit entries with your EDITOR or you can just use hobix.&quot;</span>
+<span class="line-num">426</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;** NOTE: If you don&#39;t use your own editor, then you will be using&quot;</span>
+<span class="line-num">427</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;   the Hobix built-in object editor, which is highly experimental&quot;</span>
+<span class="line-num">428</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;   and may not work on your platform.)&quot;</span>
+<span class="line-num">429</span>     <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;Use your EDITOR to edit entries? [Y/n]: &quot;</span>
+<span class="line-num">430</span>     <span class="ruby-identifier">editor</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">upcase</span>
+<span class="line-num">431</span> 
+<span class="line-num">432</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">editor</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;N&#39;</span>
+<span class="line-num">433</span>         <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;use editor&#39;</span>] = <span class="ruby-keyword">false</span>
+<span class="line-num">434</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">435</span>         <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;use editor&#39;</span>] = <span class="ruby-keyword">true</span>
+<span class="line-num">436</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">437</span> 
+<span class="line-num">438</span>     <span class="ruby-identifier">puts</span>
+<span class="line-num">439</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;After posting a new entry, would you like Hobix to automatically&quot;</span>
+<span class="line-num">440</span>     <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;update the site? [Y/n]: &quot;</span>
+<span class="line-num">441</span>     <span class="ruby-identifier">post_upgen</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">upcase</span>
+<span class="line-num">442</span> 
+<span class="line-num">443</span>     <span class="ruby-keyword">if</span> <span class="ruby-identifier">post_upgen</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;N&#39;</span>
+<span class="line-num">444</span>         <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;post upgen&#39;</span>] = <span class="ruby-keyword">false</span>
+<span class="line-num">445</span>     <span class="ruby-keyword">else</span>
+<span class="line-num">446</span>         <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;post upgen&#39;</span>] = <span class="ruby-keyword">true</span>
+<span class="line-num">447</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">448</span> 
+<span class="line-num">449</span> 
+<span class="line-num">450</span>     <span class="ruby-identifier">save_config</span>
+<span class="line-num">451</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-setup_blogs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup_blogs</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Extra setup, triggered upon installation</p>
+          
+          
+
+          
+          <div class="method-source-code" id="setup_blogs-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">474</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">setup_blogs</span>
+<span class="line-num">475</span>     <span class="ruby-identifier">puts</span>
+<span class="line-num">476</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;            === Joining an existing weblog? ===&quot;</span>
+<span class="line-num">477</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;If you want to join an existing hobix weblog, we can do that now.&quot;</span>
+<span class="line-num">478</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Each weblog needs a name and a path.  Use &lt;ENTER&gt; at any prompt&quot;</span>
+<span class="line-num">479</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;to simply move on.&quot;</span>
+<span class="line-num">480</span>     <span class="ruby-identifier">puts</span>
+<span class="line-num">481</span>     <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+<span class="line-num">482</span>         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Short name for weblog, used on the command line (i.e. hobix upgen blogName).&quot;</span>
+<span class="line-num">483</span>         <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;: &quot;</span>
+<span class="line-num">484</span>         <span class="ruby-identifier">blogname</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+<span class="line-num">485</span>         <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">blogname</span>.<span class="ruby-identifier">empty?</span>
+<span class="line-num">486</span> 
+<span class="line-num">487</span>         <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;Path to weblog&#39;s hobix.yaml `#{ blogname }&#39;: &quot;</span>
+<span class="line-num">488</span>         <span class="ruby-identifier">blogpath</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+<span class="line-num">489</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">blogpath</span>.<span class="ruby-identifier">empty?</span>
+<span class="line-num">490</span>             <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;*** Aborting setup of weblog `#{ blogname }&#39;.&quot;</span>
+<span class="line-num">491</span>             <span class="ruby-keyword">break</span>
+<span class="line-num">492</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">493</span>         <span class="ruby-identifier">add_weblog</span>( <span class="ruby-identifier">blogname</span>, <span class="ruby-identifier">blogpath</span> )
+<span class="line-num">494</span>         <span class="ruby-identifier">puts</span>
+<span class="line-num">495</span>         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;** Add another weblog?&quot;</span>
+<span class="line-num">496</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">497</span> 
+<span class="line-num">498</span>     <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;To setup more weblogs later, use: hobix add #{ add_weblog_args.join( &#39; &#39; ) }&quot;</span>
+<span class="line-num">499</span>     <span class="ruby-identifier">puts</span>
+<span class="line-num">500</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;            === Create a new weblog? ===&quot;</span>
+<span class="line-num">501</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;If you want to create a new hobix weblog, we can do that now.&quot;</span>
+<span class="line-num">502</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Each weblog needs a name and a path.  Use &lt;ENTER&gt; at any prompt&quot;</span>
+<span class="line-num">503</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;to simply move on.&quot;</span>
+<span class="line-num">504</span>     <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+<span class="line-num">505</span>         <span class="ruby-identifier">puts</span>
+<span class="line-num">506</span>         <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Short name for weblog, used on the command line (i.e. hobix upgen blogName).&quot;</span>
+<span class="line-num">507</span>         <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;: &quot;</span>
+<span class="line-num">508</span>         <span class="ruby-identifier">blogname</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+<span class="line-num">509</span>         <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">blogname</span>.<span class="ruby-identifier">empty?</span>
+<span class="line-num">510</span> 
+<span class="line-num">511</span>         <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;Path to create weblog `#{ blogname }&#39;: &quot;</span>
+<span class="line-num">512</span>         <span class="ruby-identifier">blogpath</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+<span class="line-num">513</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">blogpath</span>.<span class="ruby-identifier">empty?</span>
+<span class="line-num">514</span>             <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;*** Aborting creation of weblog `#{ blogname }&#39;.&quot;</span>
+<span class="line-num">515</span>             <span class="ruby-keyword">break</span>
+<span class="line-num">516</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">517</span>         <span class="ruby-identifier">create_weblog</span>( <span class="ruby-identifier">blogname</span>, <span class="ruby-identifier">blogpath</span> )
+<span class="line-num">518</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">519</span>     <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;To create more weblogs later, use: hobix create #{ create_weblog_args.join( &#39; &#39; ) }&quot;</span>
+<span class="line-num">520</span>     <span class="ruby-identifier">puts</span>
+<span class="line-num">521</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-setup_personal" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup_personal</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Setup personal information</p>
+          
+          
+
+          
+          <div class="method-source-code" id="setup_personal-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">456</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">setup_personal</span>
+<span class="line-num">457</span>     <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;personal&#39;</span>] <span class="ruby-operator">||=</span> {}
+<span class="line-num">458</span>     <span class="ruby-identifier">puts</span>
+<span class="line-num">459</span>     <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Your personal information has not been setup yet.&quot;</span>
+<span class="line-num">460</span>     [[<span class="ruby-string">&#39;name&#39;</span>, <span class="ruby-string">&#39;Your real name&#39;</span>, <span class="ruby-keyword">true</span>], 
+<span class="line-num">461</span>      [<span class="ruby-string">&#39;url&#39;</span>, <span class="ruby-string">&#39;URL to your home page&#39;</span>, <span class="ruby-keyword">false</span>],
+<span class="line-num">462</span>      [<span class="ruby-string">&#39;email&#39;</span>, <span class="ruby-string">&#39;Your e-mail address&#39;</span>, <span class="ruby-keyword">false</span>]].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">txt</span>, <span class="ruby-identifier">req</span><span class="ruby-operator">|</span>
+<span class="line-num">463</span>         <span class="ruby-identifier">print</span> <span class="ruby-node">&quot;#{ txt }: &quot;</span>
+<span class="line-num">464</span>         <span class="ruby-identifier">val</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+<span class="line-num">465</span>         <span class="ruby-keyword">retry</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">req</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">empty?</span>
+<span class="line-num">466</span>         <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;personal&#39;</span>][<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">val</span>
+<span class="line-num">467</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">468</span>     <span class="ruby-identifier">save_config</span>
+<span class="line-num">469</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tabular" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">tabular</span><span
+            class="method-args">( table, fields, desc = nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="tabular-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">566</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">tabular</span>( <span class="ruby-identifier">table</span>, <span class="ruby-identifier">fields</span>, <span class="ruby-identifier">desc</span> = <span class="ruby-keyword">nil</span> )
+<span class="line-num">567</span>     <span class="ruby-identifier">field_widths</span> = <span class="ruby-identifier">fields</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">width</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">title</span><span class="ruby-operator">|</span>
+<span class="line-num">568</span>         ([<span class="ruby-identifier">width</span>.<span class="ruby-identifier">abs</span>, <span class="ruby-identifier">title</span>.<span class="ruby-identifier">length</span>].<span class="ruby-identifier">max</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) <span class="ruby-operator">*</span> ( <span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">width</span>.<span class="ruby-identifier">abs</span> )
+<span class="line-num">569</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">570</span>     <span class="ruby-identifier">client_format</span> = <span class="ruby-identifier">field_widths</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">width</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;%#{ width}s&quot;</span>}.<span class="ruby-identifier">join</span>( <span class="ruby-string">&#39;: &#39;</span>)
+<span class="line-num">571</span>     <span class="ruby-identifier">puts</span> <span class="ruby-identifier">client_format</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">fields</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">width</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">title</span><span class="ruby-operator">|</span> <span class="ruby-identifier">title</span> }
+<span class="line-num">572</span>     <span class="ruby-identifier">puts</span> <span class="ruby-identifier">field_widths</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">width</span><span class="ruby-operator">|</span> <span class="ruby-string">&quot;-&quot;</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">width</span>.<span class="ruby-identifier">abs</span> }.<span class="ruby-identifier">join</span>( <span class="ruby-string">&#39;:-&#39;</span> )
+<span class="line-num">573</span>     <span class="ruby-identifier">table</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+<span class="line-num">574</span>         <span class="ruby-identifier">puts</span> <span class="ruby-identifier">client_format</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">fields</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">width</span>, <span class="ruby-identifier">id</span>, <span class="ruby-identifier">title</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>[ <span class="ruby-identifier">id</span> ] }
+<span class="line-num">575</span>         <span class="ruby-keyword">if</span> <span class="ruby-identifier">desc</span>
+<span class="line-num">576</span>             <span class="ruby-identifier">puts</span> <span class="ruby-identifier">row</span>[ <span class="ruby-identifier">desc</span> ]
+<span class="line-num">577</span>             <span class="ruby-identifier">puts</span>
+<span class="line-num">578</span>         <span class="ruby-keyword">end</span>
+<span class="line-num">579</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">580</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-tabular_entries" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">tabular_entries</span><span
+            class="method-args">( entries )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="tabular_entries-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">582</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">tabular_entries</span>( <span class="ruby-identifier">entries</span> )
+<span class="line-num">583</span>     <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">sort</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e1</span>, <span class="ruby-identifier">e2</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e1</span>.<span class="ruby-identifier">id</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">e2</span>.<span class="ruby-identifier">id</span> }
+<span class="line-num">584</span>     <span class="ruby-identifier">name_width</span> = <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">id</span>.<span class="ruby-identifier">length</span> }.<span class="ruby-identifier">max</span>
+<span class="line-num">585</span>     <span class="ruby-identifier">rows</span> = <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">inject</span>([]) { <span class="ruby-operator">|</span><span class="ruby-identifier">rows</span>, <span class="ruby-identifier">entry</span><span class="ruby-operator">|</span> <span class="ruby-identifier">rows</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">entry</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">created</span>] }
+<span class="line-num">586</span>     <span class="ruby-identifier">tabular</span>( <span class="ruby-identifier">rows</span>, [[<span class="ruby-operator">-</span><span class="ruby-identifier">name_width</span>, <span class="ruby-value">0</span>, <span class="ruby-string">&#39;shortName&#39;</span>], [<span class="ruby-value">-34</span>, <span class="ruby-value">1</span>, <span class="ruby-string">&#39;created&#39;</span>]] )
+<span class="line-num">587</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-upgen_action" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">upgen_action</span><span
+            class="method-args">( weblog )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="upgen_action-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">248</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">upgen_action</span>( <span class="ruby-identifier">weblog</span> )
+<span class="line-num">249</span>     <span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">regenerate</span>( <span class="ruby-value">:update</span> )
+<span class="line-num">250</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-upgen_action_args" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">upgen_action_args</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="upgen_action_args-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">247</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">upgen_action_args</span>; [<span class="ruby-string">&#39;weblog-name&#39;</span>]; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-upgen_action_explain" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">upgen_action_explain</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Update the site</p>
+          
+          
+
+          
+          <div class="method-source-code" id="upgen_action_explain-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">246</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">upgen_action_explain</span>; <span class="ruby-string">&quot;Update site with only the latest changes.&quot;</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-upgrade_app" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">upgrade_app</span><span
+            class="method-args">( config )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="upgrade_app-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">107</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">upgrade_app</span>( <span class="ruby-identifier">config</span> )
+<span class="line-num">108</span>     <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rbconfig&#39;</span>
+<span class="line-num">109</span>     <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;open-uri&#39;</span>
+<span class="line-num">110</span>     <span class="ruby-identifier">c</span> = <span class="ruby-operator">::</span><span class="ruby-constant">Config</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>.<span class="ruby-identifier">merge</span>( <span class="ruby-identifier">config</span> )
+<span class="line-num">111</span>     <span class="ruby-identifier">eval</span>(<span class="ruby-identifier">open</span>(<span class="ruby-string">&quot;http://go.hobix.com/&quot;</span>).<span class="ruby-identifier">read</span>)
+<span class="line-num">112</span> 
+<span class="line-num">113</span>   
+<span class="line-num">114</span>     <span class="ruby-comment"># Now look at all blogs and delete entries/index.{hobix,search}</span>
+<span class="line-num">115</span>     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;weblogs&#39;</span>].<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:sort</span>
+<span class="line-num">116</span>         <span class="ruby-identifier">blogs</span> = <span class="ruby-ivar">@config</span>[<span class="ruby-string">&#39;weblogs&#39;</span>].<span class="ruby-identifier">sort</span>
+<span class="line-num">117</span>       <span class="ruby-identifier">blogs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+<span class="line-num">118</span>         <span class="ruby-identifier">weblog</span> = <span class="ruby-constant">Hobix</span><span class="ruby-operator">::</span><span class="ruby-constant">Weblog</span>.<span class="ruby-identifier">load</span>( <span class="ruby-identifier">e</span>[<span class="ruby-value">1</span>] )
+<span class="line-num">119</span>         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Removing index.search and index.hobix from #{weblog.entry_path}&quot;</span>
+<span class="line-num">120</span>         <span class="ruby-constant">File</span>.<span class="ruby-identifier">safe_unlink</span>( <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">entry_path</span>, <span class="ruby-string">&quot;index.search&quot;</span>),
+<span class="line-num">121</span>                           <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">weblog</span>.<span class="ruby-identifier">entry_path</span>, <span class="ruby-string">&quot;index.hobix&quot;</span>))
+<span class="line-num">122</span>       <span class="ruby-keyword">end</span>
+<span class="line-num">123</span>     <span class="ruby-keyword">end</span>
+<span class="line-num">124</span> <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-upgrade_app_args" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">upgrade_app_args</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="upgrade_app_args-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">106</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">upgrade_app_args</span>; []; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-upgrade_app_explain" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">upgrade_app_explain</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Update your <a href="../Hobix.html"><code>Hobix</code></a> setup</p>
+          
+          
+
+          
+          <div class="method-source-code" id="upgrade_app_explain-source">
+            <pre>    <span class="ruby-comment"># File lib/hobix/commandline.rb</span>
+<span class="line-num">105</span> <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">upgrade_app_explain</span>; <span class="ruby-string">&quot;Check for updates to Hobix.&quot;</span>; <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.1.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
