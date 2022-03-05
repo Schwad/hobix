@@ -22,10 +22,10 @@ require 'zlib'
 require 'open-uri'
 
 unless defined? c
-    c = ::Config::CONFIG
+    c = ::RbConfig::CONFIG
     c['sharedir'] = c['datadir'] + '/hobix'
 end
-rubypath = ::Config::CONFIG['bindir'] + '/' + ::Config::CONFIG['ruby_install_name']
+rubypath = ::RbConfig::CONFIG['bindir'] + '/' + ::RbConfig::CONFIG['ruby_install_name']
 def check_hobix_version( path, version )
     installed = nil
     hobixfile = File.join( path, 'hobix.rb' )
