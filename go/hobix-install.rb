@@ -13,6 +13,8 @@
 # If you have a web proxy, set your HTTP_PROXY environment variable
 # to your proxy.
 #
+
+####################### SETUP ######################
 require 'base64'
 require 'rbconfig'
 require 'yaml'
