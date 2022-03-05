@@ -119,6 +119,7 @@ setup:
 ---
 EOY
 
+# This adds the attachments for installation
 hobix_install_yaml += attached.to_yaml( :UseBlock => true, :UseFold => false )
 
 File.open( 'go/hobix-install.yaml', 'w' ) do |hiy|

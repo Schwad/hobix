@@ -1,0 +1,12 @@
+---
+commands:
+hooks:
+  before-install-all:
+  - "bundler-as_of"
+  - "bundler-as_of"
+load_paths:
+  bundler-as_of:
+  - "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/.bundle/plugin/gems/bundler-as_of-0.1.0/lib"
+plugin_paths:
+  bundler-as_of: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/.bundle/plugin/gems/bundler-as_of-0.1.0"
+sources:

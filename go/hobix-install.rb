@@ -124,20 +124,24 @@ TMPDIR = File.join( ENV['TMPDIR']||ENV['TMP']||ENV['TEMP']||'/tmp', Time.now.str
 
 # Move through intro screens
 puts "# Readying install..."
-stream = open_try_gzip( GO_HOBIX + "hobix-install.yaml", c['host'] !~ /mswin32/ ) do |yml| 
-    YAML::load_stream( yml )
-end
-den, attached = stream.documents
-if c['host'] =~ /mswin32/ 
-    attached.merge!(
-        open_try_gzip( GO_HOBIX + "hobix-install-win32.yaml", c['host'] !~ /mswin32/ ) do |yml| 
-            YAML::load( yml )
-        end
-    )
-end
+# stream = open_try_gzip( GO_HOBIX + "hobix-install.yaml", c['host'] !~ /mswin32/ ) do |yml| 
+#     YAML::load_stream( yml )
+# end
+# den, attached = stream.documents
+# if c['host'] =~ /mswin32/ 
+#     attached.merge!(
+#         open_try_gzip( GO_HOBIX + "hobix-install-win32.yaml", c['host'] !~ /mswin32/ ) do |yml| 
+#             YAML::load( yml )
+#         end
+#     )
+# end
 
 conf = {}
 execs = {}
+
+# Temporary patch as we have the yaml now
+den = YAML::load(File.open 'go/hobix-install.yaml')
+
 den['setup'].each do |action, screen|
     print screen.gsub( /CONFIG\['(\w+)'\]/ ) { conf[action] = c[$1] }.
                  gsub( /^CONF$/ ) { conf.to_yaml }
@@ -164,7 +168,7 @@ den['setup'].each do |action, screen|
     when 'installing'
         puts
         require 'ftools'
-        attached.each do |attname, att64|
+        den['attachments'].each do |attname, att64|
             puts "creating #{ attname } (#{ att64.length / 1000 }k)..."
             filebin = if Object::const_defined? "Base64"
                           Base64::decode64( att64 )
