@@ -21,6 +21,7 @@ require 'rbconfig'
 require 'yaml'
 require 'zlib'
 require 'open-uri'
+require 'fileutils'
 
 unless defined? c
     c = ::RbConfig::CONFIG
@@ -53,7 +54,6 @@ def clean_dir( sucmd, to_dir )
         `sudo #{ rm }`
         `sudo #{ mk }`
     else
-        require 'fileutils'
         FileUtils.rm_rf to_dir
         FileUtils.mkdir_p to_dir
     end
@@ -176,7 +176,7 @@ den['setup'].each do |action, screen|
                       else
                           decode64( att64 )
                       end
-            File.makedirs( File.join( TMPDIR, File.dirname( attname ) ) )
+            FileUtils.makedirs( File.join( TMPDIR, File.dirname( attname ) ) )
             case attname
             when /^bin\//
                 attfile = $'
