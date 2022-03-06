@@ -1,4 +1,4 @@
-#! /Users/cnixon/lib/ruby-ree/bin/ruby
+#!/opt/rubies/2.7.3/bin/ruby
 require 'hobix/commandline'
 require 'optparse'
 
