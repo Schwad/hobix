@@ -17,10 +17,7 @@ Or you can install the CVS version here by using:
 
 Goo* luc*! -- _why
 
-## Contributing notes from heathen Nick (I'm a heathen because I'm putting in docs in _why's readme)
+## This gem is authored by _why and now maintained by @schwad. Go below if you want to get started
 
-* local_install_example is an example of a local installation
-* setup.rb and install.rb are relics from old ways of setting up ruby before rubygems. Try to use the Gemfile to document development dependencies
-* The gemspec is in the rakefile
-* make-go.rb is a utility that creates the `hobix-install.yaml` that is relied on by `go/hobix-install.rb` to run
-* `pkg` holds the generated rubygem. can probably ignore this
+* [CONTRIBUTING](docs/CONTRIBUTING.md)
+* [Worklist to get gem live](docs/WORKLIST.md)

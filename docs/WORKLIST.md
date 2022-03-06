@@ -1,0 +1,34 @@
+# Worklist
+
+**Mission**: Our primary goal is to make Hobix work for users as intended in 2004 without altering the user experience _at all_. 
+
+The primary worklist is informed from the output of the hobix command; with what actions ought to work.
+
+We can do good housekeeping to improve the reliability and resiliency of this gem, but refactors are discouraged as _we want to preserve the art of this gem_. 
+
+Consider it like owning a listed house. We can sweep the floors easily, but have to be mindful about replacing toilets and absolutely cannot knock down walls, okay?
+
+This is a labor of love and only tested on a modern macbook pro. The original version put in effort to explicitly support windows and linux. That will not be part of this effort but is welcome if there is support or interest.
+
+- [✅] hobix (no input)
+
+hobix 0.6 on ruby 2.6.8 (2021-07-07) [universal.x86_64-darwin21]
+Usage: hobix command weblog-name [command-options]
+Commands are
+  - [ ]upgrade                               Check for updates to Hobix.             
+
+  - [ ] add weblog-name /path/to/hobix.yaml   Adds a pre-existing hobix weblog to your list.
+  - [ ] blogs                                 List your weblogs.                      
+  - [ ] create weblog-name /path/to/          Create a brand new weblog.              
+  - [ ] del weblog-name                       Remove weblog from your list.           
+  - [ ] druby                                 Start the DRuby daemon for weblogs in your config.
+
+  - [ ] edit weblog-name                      Edit weblog's configuration             
+  - [ ] list weblog-name search/path          List all posts within a given path.     
+  - [ ] patch weblog-name patch-name          Applies a patch to a weblog.            
+  - [ ] post weblog-name [type] shortName     Add or edit a post with identifier 'shortName'.
+                                        (You can use full paths. 'blog/weddings/anotherPatheticWedding')
+                                        'type' specifies the type of entry to create if the entry does not
+                                        already exist.
+  - [ ] regen weblog-name                     Regenerate the all the pages throughout the site.
+  - [ ] upgen weblog-name                     Update site with only the latest changes.
