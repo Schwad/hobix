@@ -29,7 +29,7 @@ module CommandLine
     ].each do |home_top, home_dir|
         next unless home_top
         if File.exists? home_top
-            File.makedirs( home_dir )
+            FileUtils.makedirs( home_dir )
             HOME_DIR = home_dir
             break
         end
