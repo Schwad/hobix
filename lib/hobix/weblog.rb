@@ -883,6 +883,19 @@ class Weblog
 end
 end
 
+# Monkeypatch as this was removed in Ruby 1.9.2
+def YAML.object_maker( obj_class, val )
+    if Hash === val
+        o = obj_class.allocate
+        val.each_pair { |k,v|
+            o.instance_variable_set("@#{k}", v)
+        }
+        o
+    else
+        raise YAML::Error, "Invalid object explicitly tagged !ruby/Object: " + val.inspect
+    end
+end
+
 YAML::add_domain_type( 'hobix.com,2004', 'weblog' ) do |type, val|
     YAML::object_maker( Hobix::Weblog, val )
 end
