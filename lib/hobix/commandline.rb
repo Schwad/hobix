@@ -182,19 +182,21 @@ module CommandLine
             return
         end
 
-        modes = load_patchsets
+        # This lists out some apache server settings. Disabled for now. Can
+        # be reviewed in another feature in the future.
+        # modes = load_patchsets
 
-        puts "The default blog is available in the following modes:"
-        puts "  #{ modes.keys.join( ', ' ) }"
-        puts
-        mode = nil
-        loop do
-            print "Modes: [Comma between each mode or Enter for none] "
-            mode = gets.strip.downcase
-            m = mode
-            break if mode.empty? or not mode.split( /,/ ).detect { |m| m.strip!; not modes.has_key?( m ) }
-            puts "*** No `#{ m }' mode available."
-        end
+        # puts "The default blog is available in the following modes:"
+        # puts "  #{ modes.keys.join( ', ' ) }"
+        # puts
+        # mode = nil
+        # loop do
+        #     print "Modes: [Comma between each mode or Enter for none] "
+        #     mode = gets.strip.downcase
+        #     m = mode
+        #     break if mode.empty? or not mode.split( /,/ ).detect { |m| m.strip!; not modes.has_key?( m ) }
+        #     puts "*** No `#{ m }' mode available."
+        # end
 
         require 'fileutils'
         FileUtils.makedirs path
@@ -528,7 +530,7 @@ module CommandLine
         if @config['use editor']
             # I am quite displeased that Tempfile.open eats its blocks result,
             # thereby necessitating this blecherous construct...
-            tempfile = nil
+            tempfile = Tempfile.new
             Tempfile.open("hobix.post") { |tempfile| tempfile << obj.to_yaml }
   
             begin
@@ -543,6 +545,8 @@ module CommandLine
                     obj = nil
                 end
             rescue StandardError => e
+                # TODO: cleanup when working again
+                require 'pry'; binding.pry
                 puts "There was an error saving the entry: #{ e.class }: #{ e.message }"
                 print "Re-edit [Yn]? "
                 response = gets.strip
