@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     RedCloth (3.0.4)
+    ftools (0.0.0)
     gash (0.1.4)
       open4 (>= 0.9.6)
     grancher (0.1)
@@ -14,6 +15,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth (= 3.0.4)
+  ftools
   grancher (= 0.1)
   rake (~> 0.9.6)
 
