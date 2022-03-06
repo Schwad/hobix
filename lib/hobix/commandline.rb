@@ -458,11 +458,15 @@ module CommandLine
         puts
         puts "Your personal information has not been setup yet."
         [['name', 'Your real name', true], 
-         ['url', 'URL to your home page', false],
-         ['email', 'Your e-mail address', false]].each do |k, txt, req|
-            print "#{ txt }: "
-            val = gets.strip
-            retry if req and val.empty?
+        ['url', 'URL to your home page', false],
+        ['email', 'Your e-mail address', false]].each do |k, txt, req|
+            begin
+                print "#{ txt }: "
+                val = gets.strip
+                raise ArgumentError if req and val.empty?
+            rescue
+                retry
+            end
             @config['personal'][k] = val
         end
         save_config
