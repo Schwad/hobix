@@ -1,0 +1,72 @@
+--- &1 !ruby/object:Hobix::Weblog
+title: a bokononist asks
+link: http://bokononist.hobix.com/
+tagline: nice, nice, very nice
+period: 00:60:00
+authors:
+  schwad:
+    name: Nicholas Schwaderer
+    url: https://schwad.github.io
+    email: nicholas.schwaderer@gmail.com
+linklist:
+- hobix: http://hobix.com/
+- del.icio.us: http://del.icio.us/
+requires:
+- hobix/storage/filesys
+- hobix/out/quick
+- hobix/out/erb
+- hobix/out/rss
+- hobix/out/okaynews
+- hobix/out/atom
+hobix_yaml: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad/hobix.yaml"
+path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad"
+sections: {}
+plugins:
+- !ruby/object:Hobix::Storage::FileSys
+  link: !ruby/object:URI::HTTP
+    scheme: http
+    user: 
+    password: 
+    host: bokononist.hobix.com
+    port: 80
+    path: ''
+    query: 
+    opaque: 
+    fragment: 
+    parser: !ruby/object:URI::RFC3986_Parser
+      regexp:
+        :SCHEME: !ruby/regexp /\A[A-Za-z][A-Za-z0-9+\-.]*\z/
+        :USERINFO: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=A-Z_a-z~])*\z/
+        :HOST: !ruby/regexp /\A(?:(?<IP-literal>\[(?:(?<IPv6address>(?:\h{1,4}:){6}(?<ls32>\h{1,4}:\h{1,4}|(?<IPv4address>(?<dec-octet>[1-9]\d|1\d{2}|2[0-4]\d|25[0-5]|\d)\.\g<dec-octet>\.\g<dec-octet>\.\g<dec-octet>))|::(?:\h{1,4}:){5}\g<ls32>|\h{,4}::(?:\h{1,4}:){4}\g<ls32>|(?:(?:\h{1,4}:)?\h{1,4})?::(?:\h{1,4}:){3}\g<ls32>|(?:(?:\h{1,4}:){,2}\h{1,4})?::(?:\h{1,4}:){2}\g<ls32>|(?:(?:\h{1,4}:){,3}\h{1,4})?::\h{1,4}:\g<ls32>|(?:(?:\h{1,4}:){,4}\h{1,4})?::\g<ls32>|(?:(?:\h{1,4}:){,5}\h{1,4})?::\h{1,4}|(?:(?:\h{1,4}:){,6}\h{1,4})?::)|(?<IPvFuture>v\h+\.[!$&-.0-;=A-Z_a-z~]+))\])|\g<IPv4address>|(?<reg-name>(?:%\h\h|[!$&-.0-9;=A-Z_a-z~])*))\z/
+        :ABS_PATH: !ruby/regexp /\A\/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*(?:\/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*)*\z/
+        :REL_PATH: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~])+(?:\/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*)*\z/
+        :QUERY: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~\/?])*\z/
+        :FRAGMENT: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~\/?])*\z/
+        :OPAQUE: !ruby/regexp /\A(?:[^\/].*)?\z/
+        :PORT: !ruby/regexp /\A[\x09\x0a\x0c\x0d ]*\d*[\x09\x0a\x0c\x0d ]*\z/
+  updated: {}
+  basepath: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad/entries"
+  default_author: 
+  weblog: *1
+- !ruby/object:Hobix::Out::Quick
+  hobix_path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad"
+  path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad/skel"
+- !ruby/object:Hobix::Out::QuickSummary
+  hobix_path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad"
+  path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad/skel"
+- !ruby/object:Hobix::Out::QuickArchive
+  hobix_path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad"
+  path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad/skel"
+- !ruby/object:Hobix::Out::ERB
+  path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad/skel"
+- !ruby/object:Hobix::Out::RSS
+  path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad/skel"
+  extra_ns: 
+  extra_els: 
+  summaries: 
+  more_link: 
+  comment_aname: 
+- !ruby/object:Hobix::Out::OkayNews
+  path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad/skel"
+- !ruby/object:Hobix::Out::Atom
+  path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad/skel"
