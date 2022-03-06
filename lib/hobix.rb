@@ -1,3 +1,5 @@
+# >= ruby 1.9 removed '.' from $LOAD_PATH
+$:.unshift File.dirname(__FILE__)
 #
 # = hobix.rb
 #

@@ -14,6 +14,8 @@
 # $Id$
 #++
 
+$wutitizmang = 'hello'
+
 require 'yaml'
 
 module Hobix

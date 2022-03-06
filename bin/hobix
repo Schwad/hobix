@@ -1,4 +1,5 @@
 #!/opt/rubies/2.7.3/bin/ruby
+require_relative '../lib/hobix'
 require 'hobix/commandline'
 require 'optparse'
 
