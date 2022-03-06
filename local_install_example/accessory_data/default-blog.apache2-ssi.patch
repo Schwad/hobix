@@ -1,0 +1,3 @@
+--- !hobix.com,2004/patches/^list
+htdocs/.htaccess: !^file-ensure |
+  AddOutputFilter INCLUDES .html

@@ -1,0 +1,8 @@
+--- !hobix.com,2004/patches/^list
+htdocs/control/.htaccess: !^file-ensure |
+  AddHandler cgi-script .cgi
+  Options +FollowSymLinks +ExecCGI
+  
+  RewriteEngine   On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule     ^(.*)$              /control/hobix.cgi

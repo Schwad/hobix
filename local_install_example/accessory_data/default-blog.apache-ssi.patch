@@ -1,0 +1,38 @@
+--- !hobix.com,2004/patches/^list
+hobix.yaml: !^yaml-merge
+  requires:
+  - local
+
+lib/local.rb: !^file-create |
+  module Hobix
+  class Weblog
+      def skel_sidebar( path_storage, section_path )
+          months = path_storage.get_months( storage.find )
+          page = Page.new( 'sidebar' )
+          page.updated = Time.now
+          yield :page => page, :months => months
+      end
+  end
+  class Out::Quick
+      def sidebar_erb
+          %{<!--#include virtual="<%= weblog.expand_path( 'sidebar.html' ) %>"-->}
+      end
+  end
+  end
+
+skel/sidebar.html.quick: !^file-create |
+  page: <+ sidebar +>
+  sidebar: |
+    <div id="sidebar">
+    <+ sidebar_list +>
+    </div>
+  
+  sidebar_archive: |
+    <div class="sidebarBox">
+    <h2 class="sidebarTitle">Archive</h2>
+    <ul>
+    <% months.reverse.each do |month_start, month_end, month_id| %>
+        <li><a href="<%= weblog.expand_path month_id %>"><%= month_start.strftime( "%B %Y" ) %></a></li>
+    <% end %>
+    </ul>
+    </div>

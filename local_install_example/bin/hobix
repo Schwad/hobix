@@ -1,0 +1,98 @@
+#!/opt/rubies/2.7.3/bin/ruby
+$:.unshift "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/local_install_example/lib"
+require 'hobix/commandline'
+require 'optparse'
+
+cmdline = Class.new
+cmdline.extend Hobix::CommandLine
+
+def print_usage( cmdline )
+    puts "hobix #{ Hobix::VERSION } on ruby #{ ::RUBY_VERSION } (#{ ::RUBY_RELEASE_DATE }) [#{ ::RUBY_PLATFORM }]"
+    puts "Usage: hobix command weblog-name [command-options]"
+    puts "Commands are"
+    ['app', 'weblog', 'action'].each do |cmd_type|
+        cmdline.methods.collect do |m|
+            if m =~ /^(\w+)_(#{ cmd_type })$/
+                [$1, $&]
+            end
+        end.compact.sort.each do |cmd, m|
+            args = "#{ cmd } #{ cmdline.method( "#{ m }_args" ).call.join( ' ' ) }"
+            exp = cmdline.method( "#{ m }_explain" ).call.gsub( /\n/, "\n" + ( " " * 40 ) )
+            puts "  %-38s%-40s" % [args, exp]
+        end
+        puts
+    end
+    exit
+end
+
+config = nil
+opts = OptionParser.new
+opts.on( "-c", "--config FILE", String ) { |val| config = val }
+
+args = opts.parse( *ARGV )
+print_usage( cmdline ) if args.length < 1 or args[0] == 'help'
+
+# unfreeze the arguments
+cmd, *opts = args.collect do |arg|
+    arg.dup
+end
+args.clear
+
+cmdline.login( config )
+
+mname = nil
+if cmd == 'setup_blogs'
+    mname = cmd
+elsif cmdline.respond_to? "#{ cmd }_app"
+    mname = "#{ cmd }_app"; opts = [YAML::load( DATA )]
+elsif cmdline.respond_to? "#{ cmd }_weblog"
+    mname = "#{ cmd }_weblog"
+elsif cmdline.respond_to? "#{ cmd }_action"
+    weblog = opts.shift
+    unless cmdline.config['weblogs'].respond_to? :has_key?
+        puts "*** no weblogs found in your configuration."
+        puts "*** use `hobix create' or `hobix add' to setup."
+        exit
+    end
+    unless cmdline.config['weblogs'].has_key? weblog
+        puts "*** no weblog `#{ weblog }' found in your configuration."
+        puts "*** type `hobix help' and check your spelling."
+        exit
+    end
+    begin
+      hobix_weblog = URI::parse( cmdline.config['weblogs'][ weblog ] )
+    rescue URI::InvalidURIError
+      hobix_weblog = URI.parse ''
+    end
+    if hobix_weblog.scheme and hobix_weblog.scheme.length > 1
+        mname = "#{ hobix_weblog.scheme }_#{ cmd }_remote"
+        unless cmdline.respond_to? mname
+            opts.unshift cmd
+            mname = hobix_weblog.scheme
+        end
+    else
+        hobix_weblog = Hobix::Weblog.load( cmdline.config['weblogs'][ weblog ] )
+        mname = "#{ cmd }_action"
+    end
+    opts.unshift hobix_weblog
+end
+unless mname
+    abort "*** no hobix command `#{ cmd }'. use `hobix' without arguments to get help."
+end
+m = cmdline.method( mname )
+if m.arity == opts.length or (m.arity < 0 and opts.length >= m.arity.abs - 1)
+    m.call( *opts )
+else
+    arglist = [cmd] + cmdline.method( "#{ mname }_args" ).call
+    need = m.arity
+    need = need.abs - 1 if need < 0
+    puts "*** wrong arguments (#{opts.length} given, #{need} needed)"
+    puts "*** use syntax: `hobix #{ arglist.join( ' ' ) }'"
+end
+
+__END__
+---
+sitelibdir: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/local_install_example/lib"
+bindir: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/local_install_example/bin"
+sharedir: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/local_install_example/accessory_data"
+sucmd: sudo

@@ -1,0 +1,8 @@
+--- !hobix.com,2004/patches/^list
+htdocs/control/hobix.cgi: !^file-create |
+  #!/usr/bin/env ruby
+  require 'hobix/webapp'
+  require 'hobix/weblog'
+  Hobix::WebApp() do |web|
+    Hobix::Weblog.load( "../../hobix.yaml" ).facet_for( web )
+  end
