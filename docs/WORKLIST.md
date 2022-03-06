@@ -15,6 +15,7 @@ This is a labor of love and only tested on a modern macbook pro. The original ve
 hobix 0.6 on ruby 2.6.8 (2021-07-07) [universal.x86_64-darwin21]
 Usage: hobix command weblog-name [command-options]
 Commands are
+  - [ ] setup_blogs (undocumented but the first one)
   - [ ]upgrade                               Check for updates to Hobix.             
 
   - [ ] add weblog-name /path/to/hobix.yaml   Adds a pre-existing hobix weblog to your list.
@@ -32,3 +33,8 @@ Commands are
                                         already exist.
   - [ ] regen weblog-name                     Regenerate the all the pages throughout the site.
   - [ ] upgen weblog-name                     Update site with only the latest changes.
+
+  ## Additional
+
+  - [ ] Hobix code editor
+  - [ ] the apache options in setup_blogs
