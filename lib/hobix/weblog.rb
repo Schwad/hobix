@@ -23,6 +23,7 @@ require 'ftools'
 require 'uri'
 require 'yaml'
 require 'hobix/storage/filesys'
+require 'hobix/out/out'
 
 module Hobix
 # The UriStr mixin ensures that URIs are supplied a to_str

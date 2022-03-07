@@ -276,7 +276,7 @@ module CommandLine
         @config['weblogs'].delete( name )
         save_config
         puts "** #{name} deleted successfully. NOTE: the blog itself still exists on \
-        the filesystem and can be re-linked with `hobix add`"
+the filesystem and can be re-linked with `hobix add`"
     end
 
     # Run a DRuby daemon for blogs in your configuration
