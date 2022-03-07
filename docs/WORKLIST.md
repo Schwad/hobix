@@ -34,7 +34,7 @@ Commands are
   - [✅] del weblog-name                       Remove weblog from your list.           
   - [ ] druby                                 Start the DRuby daemon for weblogs in your config.
 
-  - [ ] edit weblog-name                      Edit weblog's configuration             
+  - [✅] edit weblog-name                      Edit weblog's configuration             
   - [ ] list weblog-name search/path          List all posts within a given path.     
   - [ ] patch weblog-name patch-name          Applies a patch to a weblog.            
   - [ ] post weblog-name [type] shortName     Add or edit a post with identifier 'shortName'.

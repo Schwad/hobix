@@ -355,11 +355,12 @@ the filesystem and can be re-linked with `hobix add`"
         
         entry_class = weblog.entry_class(entry_type)
         begin
+            # Getting nil for storage here. Do I need to turn this plugin on
             entry = weblog.storage.load_entry( entry_id )
             if entry_type and not entry.instance_of? entry_class
                 raise TypeError, "#{entry_id} already exists with a different type (#{entry.class})"
             end
-        rescue Errno::ENOENT
+        rescue Errno::ENOENT, NoMethodError
             entry = entry_class.new
             entry.author = @config['username']
             entry.title = entry_id.split( '/' ).

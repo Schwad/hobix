@@ -368,7 +368,11 @@ class Weblog
         tag = @entry_class =~ /^[\w:]+$/ ? @entry_class.untaint : default_entry_class unless tag
             
         found_class = nil
-        raise @@entry_classes.inspect
+        # I have absolutely no idea why this is here but it's so odd and intentional
+        # I'm leaving it here now for posterity
+        # Much love,
+        # Schwad
+        # raise @@entry_classes.inspect
         if @@entry_classes
 
             found_class = @@entry_classes.find do |c|
@@ -397,6 +401,7 @@ class Weblog
 
     def linklist
         if @linklist.class == ::Array
+            # Removed in Ruby 2
             YAML::transfer( 'hobix.com,2004/linklist', {'links' => @linklist} )
         else
            @linklist
