@@ -1,4 +1,14 @@
 ---
+- - trunk/you_know_how_we_do_part_two3
+  - !ruby/object:Hobix::IndexEntry
+    id: trunk/you_know_how_we_do_part_two3
+    link: http://bokononist.hobix.com/trunk/you_know_how_we_do_part_two3.html
+    title: You Know How We Do Part Two3 lmao
+    created: 2022-03-07 15:09:55.000000000 +00:00
+    modified: &1 2022-03-07 15:10:28.000000000 +00:00
+    updated: *1
+    tags:
+    - trunk
 - - trunk/a_brand_new_world
   - !ruby/object:Hobix::IndexEntry
     id: trunk/a_brand_new_world
@@ -6,6 +16,6 @@
     title: A Brand New World
     created: 2022-03-07 14:49:26.000000000 +00:00
     modified: 
-    updated: 2022-03-07 14:51:05.715151537 +00:00
+    updated: 2022-03-07 14:57:39.039066828 +00:00
     tags:
     - trunk

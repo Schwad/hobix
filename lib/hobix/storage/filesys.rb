@@ -90,6 +90,10 @@ class FileSys < Hobix::BaseStorage
 
         load_index
         check_id( id )
+
+        # This is a patch :(
+        @index = @index.to_h
+
         e.created ||= (@index.has_key?( id ) ? @index[id].created : now)
         path = entry_path( id )
 
@@ -162,7 +166,7 @@ class FileSys < Hobix::BaseStorage
                 else
                     YAML::Omap::new
                 end
-        @index = YAML::Omap::new
+        @index = YAML::Omap::new.to_h
         # load_search_index( index.length == 0 )
 
         modified = false
@@ -180,6 +184,10 @@ class FileSys < Hobix::BaseStorage
                 @updated[entry_id] = File.mtime( path )
 
                 index_entry = nil
+                
+                # I think this expects a hash
+                index = index.to_h
+
                 if ( index.has_key? entry_id ) and !( index[entry_id].is_a? ::Time ) # pre-0.4 index format
                     index_entry = index[entry_id]
                 end
