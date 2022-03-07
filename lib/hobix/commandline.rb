@@ -107,7 +107,7 @@ module CommandLine
     def upgrade_app( config )
         require 'rbconfig'
         require 'open-uri'
-        c = ::Config::CONFIG.merge( config )
+        c = ::RbConfig::CONFIG.merge( config )
         eval(open("http://go.hobix.com/").read)
 
       
@@ -530,11 +530,8 @@ the filesystem and can be re-linked with `hobix add`"
 
     def aorta( obj )
         if @config['use editor']
-            # I am quite displeased that Tempfile.open eats its blocks result,
-            # thereby necessitating this blecherous construct...
             tempfile = Tempfile.new
-            Tempfile.open("hobix.post") { |tempfile| tempfile << obj.to_yaml }
-  
+            tempfile << obj.to_yaml
             begin
                 created = File.mtime( tempfile.path )
                 system( "#{ ENV['EDITOR'] || 'vi' } #{ tempfile.path }" )

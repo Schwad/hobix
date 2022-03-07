@@ -25,9 +25,10 @@ Usage: hobix command weblog-name [command-options]
 Commands are
   - [✅] setup_blogs (undocumented but the first one)
     * Though I don't know what the quick out hobix file does
-  - [ ]upgrade                               Check for updates to Hobix.             
+  - [ ]upgrade                               Check for updates to Hobix.    
+    * This one is a nasty pasty and should be scoped to the work to get it working like the olden days. We'll try to get it working as a gem first. This is not necessarily necessary! (why conc)         
 
-  - [ ] add weblog-name /path/to/hobix.yaml   Adds a pre-existing hobix weblog to your list.
+  - [✅] add weblog-name /path/to/hobix.yaml   Adds a pre-existing hobix weblog to your list.
   - [✅] blogs                                 List your weblogs.                      
   - [✅] create weblog-name /path/to/          Create a brand new weblog.              
   - [✅] del weblog-name                       Remove weblog from your list.           
