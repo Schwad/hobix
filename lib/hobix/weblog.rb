@@ -411,7 +411,6 @@ class Weblog
 
     # Load the weblog information from a YAML file and +start+ the Weblog.
     def Weblog::load( hobix_yaml )
-        require 'pry'; binding.pry
         hobix_yaml = File.expand_path( hobix_yaml )
         weblog = YAML::load( File::open( hobix_yaml ) )
         weblog.start( hobix_yaml )

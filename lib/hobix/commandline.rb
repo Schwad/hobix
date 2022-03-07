@@ -547,8 +547,6 @@ the filesystem and can be re-linked with `hobix add`"
                     obj = nil
                 end
             rescue StandardError => e
-                # TODO: cleanup when working again
-                require 'pry'; binding.pry
                 puts "There was an error saving the entry: #{ e.class }: #{ e.message }"
                 print "Re-edit [Yn]? "
                 response = gets.strip
