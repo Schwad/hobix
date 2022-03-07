@@ -211,7 +211,7 @@ class FileSys < Hobix::BaseStorage
     def sort_index( modified )
         return unless @index
         index_path = File.join( @basepath, 'index.hobix' )
-        @index.sort! { |x,y| y[1].created <=> x[1].created }
+        @index = @index.sort { |x,y| y[1].created <=> x[1].created }
         if modified
             File.open( index_path, 'w' ) do |f|
               YAML::dump( @index, f )
