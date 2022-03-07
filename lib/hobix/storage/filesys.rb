@@ -85,14 +85,16 @@ class FileSys < Hobix::BaseStorage
     # Save the entry object +e+ and identify it as +id+.  The +create_category+ flag
     # will forcefully make the needed directories.
     def save_entry( id, e, create_category=false )
+        # Make directory before load_index
+        unless create_category and File.exists? @basepath
+            FileUtils.makedirs File.dirname( path )
+        end
+        require 'pry'; binding.pry
+
         load_index
         check_id( id )
         e.created ||= (@index.has_key?( id ) ? @index[id].created : now)
         path = entry_path( id )
-
-        unless create_category and File.exists? @basepath
-            FileUtils.makedirs File.dirname( path )
-        end
         
         File.open( path, 'w' ) { |f| YAML::dump( e, f ) }
 

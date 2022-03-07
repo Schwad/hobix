@@ -56,3 +56,7 @@ Commands are
   - [ ] the apache options in setup_blogs (`commandline.rb:189-210`)
   - [ ] Allow `eval style` install with all old functionality
   - [ ] Ensure gemspec works so that executable can just work as well
+  - [ ] `Weblog#storage` is not automatically detecting plugins. This needs to be addressed
+
+
+  ----> when I pick this back up, I have a weird situation where I need to `load_index` in filesys *before* I make a directory if it doesn't exist, but that directory needs to be made first. this'll unlock `hobix post` which is a critical part of cli
