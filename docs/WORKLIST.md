@@ -8,6 +8,14 @@ We can do good housekeeping to improve the reliability and resiliency of this ge
 
 Consider it like owning a listed house. We can sweep the floors easily, but have to be mindful about replacing toilets and absolutely cannot knock down walls, okay?
 
+## Updates that will not be accepted
+
+* linters (unless it's a custom rubocop that passes _why's style of coding which would be cool)
+* ci
+* javascript
+* nfts
+* koalas
+
 This is a labor of love and only tested on a modern macbook pro. The original version put in effort to explicitly support windows and linux. That will not be part of this effort but is welcome if there is support or interest.
 
 - [✅] hobix (no input)
@@ -20,9 +28,9 @@ Commands are
   - [ ]upgrade                               Check for updates to Hobix.             
 
   - [ ] add weblog-name /path/to/hobix.yaml   Adds a pre-existing hobix weblog to your list.
-  - [ ] blogs                                 List your weblogs.                      
-  - [ ] create weblog-name /path/to/          Create a brand new weblog.              
-  - [ ] del weblog-name                       Remove weblog from your list.           
+  - [✅] blogs                                 List your weblogs.                      
+  - [✅] create weblog-name /path/to/          Create a brand new weblog.              
+  - [✅] del weblog-name                       Remove weblog from your list.           
   - [ ] druby                                 Start the DRuby daemon for weblogs in your config.
 
   - [ ] edit weblog-name                      Edit weblog's configuration             
@@ -38,4 +46,11 @@ Commands are
   ## Additional
 
   - [ ] Hobix code editor
-  - [ ] the apache options in setup_blogs
+    * This appears to be referenced here in `Commandline#aorta`
+    ```ruby
+    require 'hobix/util/objedit'
+    obj = Hobix::Util::ObjEdit( obj )
+    ```
+  - [ ] the apache options in setup_blogs (`commandline.rb:189-210`)
+  - [ ] Allow `eval style` install with all old functionality
+  - [ ] Ensure gemspec works so that executable can just work as well

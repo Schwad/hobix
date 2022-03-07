@@ -198,9 +198,9 @@ module CommandLine
         #     puts "*** No `#{ m }' mode available."
         # end
 
-        # require 'fileutils'
-        # FileUtils.makedirs path
-        # FileUtils.cp_r Dir.glob( "#{ Hobix::SHARE_PATH }/default-blog/*" ), path
+        require 'fileutils'
+        FileUtils.makedirs path
+        FileUtils.cp_r Dir.glob( "#{ Hobix::SHARE_PATH }/default-blog/*" ), path
 
         # # apply any patches
         # patchlist = mode.split( /,/ ).map { |m| modes[m.strip] }.flatten.uniq
@@ -275,6 +275,8 @@ module CommandLine
         @config['weblogs'] ||= {}
         @config['weblogs'].delete( name )
         save_config
+        puts "** #{name} deleted successfully. NOTE: the blog itself still exists on \
+        the filesystem and can be re-linked with `hobix add`"
     end
 
     # Run a DRuby daemon for blogs in your configuration
