@@ -52,6 +52,7 @@ Commands are
     require 'hobix/util/objedit'
     obj = Hobix::Util::ObjEdit( obj )
     ```
+  - [✅] Properly using my own code editor and saving inside CLI commands
   - [ ] the apache options in setup_blogs (`commandline.rb:189-210`)
   - [ ] Allow `eval style` install with all old functionality
   - [ ] Ensure gemspec works so that executable can just work as well
