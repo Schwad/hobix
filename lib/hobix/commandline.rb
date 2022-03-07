@@ -533,6 +533,9 @@ the filesystem and can be re-linked with `hobix add`"
         if @config['use editor']
             tempfile = Tempfile.new
             tempfile << obj.to_yaml
+            
+            # Ensure that we're capturing tempfile content.
+            tempfile.rewind
             begin
                 created = File.mtime( tempfile.path )
                 system( "#{ ENV['EDITOR'] || 'vi' } #{ tempfile.path }" )
