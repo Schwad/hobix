@@ -1,12 +1,22 @@
 ---
+- - cult/okay_with_some_pizazz
+  - !ruby/object:Hobix::IndexEntry
+    id: cult/okay_with_some_pizazz
+    link: http://bokononist.hobix.com/cult/okay_with_some_pizazz.html
+    title: Okay With Some Pizazz
+    created: 2022-03-07 15:21:58.000000000 +00:00
+    modified: &1 2022-03-07 15:21:58.000000000 +00:00
+    updated: *1
+    tags:
+    - cult
 - - trunk/you_know_how_we_do_part_two3
   - !ruby/object:Hobix::IndexEntry
     id: trunk/you_know_how_we_do_part_two3
     link: http://bokononist.hobix.com/trunk/you_know_how_we_do_part_two3.html
     title: You Know How We Do Part Two3 lmao
     created: 2022-03-07 15:09:55.000000000 +00:00
-    modified: &1 2022-03-07 15:10:28.000000000 +00:00
-    updated: *1
+    modified: 
+    updated: 2022-03-07 15:10:28.263757360 +00:00
     tags:
     - trunk
 - - trunk/a_brand_new_world
