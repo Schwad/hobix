@@ -472,7 +472,9 @@ class Weblog
     # Returns the storage plugin currently in use.  (There
     # can be only one per weblog.)
     def storage
-        @plugins.detect { |p| p.is_a? BaseStorage }
+        # TODO: at this point no plugins are getting detected so defulating
+        # to filesys
+        @plugins.detect { |p| p.is_a? BaseStorage } || Hobix::Storage::FileSys.new( self )
     end
 
     # Returns an Array of all output plugins in use.  (There can

@@ -370,7 +370,7 @@ the filesystem and can be re-linked with `hobix add`"
         end
         entry = aorta( entry )
         return if entry.nil?
-
+        require 'pry'; binding.pry
         begin
             weblog.storage.save_entry( entry_id, entry )
         rescue Errno::ENOENT
@@ -533,7 +533,7 @@ the filesystem and can be re-linked with `hobix add`"
         if @config['use editor']
             tempfile = Tempfile.new
             tempfile << obj.to_yaml
-            
+
             # Ensure that we're capturing tempfile content.
             tempfile.rewind
             begin
