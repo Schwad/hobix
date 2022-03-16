@@ -1,12 +1,21 @@
 ---
+- - hello_worlddd
+  - !ruby/object:Hobix::IndexEntry
+    id: hello_worlddd
+    link: http://bokononist.hobix.com/hello_worlddd.html
+    title: Hello Worlddd
+    created: 2022-03-16 22:09:50.000000000 +00:00
+    modified: &1 2022-03-16 22:09:50.000000000 +00:00
+    updated: *1
+    tags: []
 - - cult/okay_with_some_pizazz
   - !ruby/object:Hobix::IndexEntry
     id: cult/okay_with_some_pizazz
-    link: http://bokononist.hobix.com/cult/okay_with_some_pizazz.html
+    link: 
     title: Okay With Some Pizazz
     created: 2022-03-07 15:21:58.000000000 +00:00
-    modified: &1 2022-03-07 15:21:58.000000000 +00:00
-    updated: *1
+    modified: 
+    updated: 2022-03-07 15:21:58.025191745 +00:00
     tags:
     - cult
 - - trunk/you_know_how_we_do_part_two3

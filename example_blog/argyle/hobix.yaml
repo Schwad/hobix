@@ -1,7 +1,7 @@
 --- !ruby/object:Hobix::Weblog
-title: This is schwad's world for sure
+title: a bokononist asks
 link: http://bokononist.hobix.com/
-tagline: such a nice place
+tagline: nice, nice, very nice!
 period: 00:60:00
 authors:
   schwad:
@@ -18,10 +18,7 @@ requires:
 - hobix/out/rss
 - hobix/out/okaynews
 - hobix/out/atom
-hobix_yaml: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad/hobix.yaml"
-path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad"
-sections:
-  about:
-    ignore: true
-    sort_by: id
+hobix_yaml: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/argyle/hobix.yaml"
+path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/argyle"
+sections: {}
 plugins: []

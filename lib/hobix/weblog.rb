@@ -627,7 +627,6 @@ class Weblog
                         vars[var_name].extend Hobix::EntryEnum
                     end
                 end
-
                 ## Publish the page
                 vars = vars.dup
                 output = vars.delete( :output )
@@ -637,7 +636,7 @@ class Weblog
                 full_out_path = File.join( output_path, vars[:page].link.split( '/' ) )
                 saved_umask = File.umask( 0002 ) rescue nil
                 begin
-                  File.makedirs( File.dirname( full_out_path ) )
+                  FileUtils.makedirs( File.dirname( full_out_path ) )
                   File.open( full_out_path, 'w' ) do |f| 
                       f << txt
                   end

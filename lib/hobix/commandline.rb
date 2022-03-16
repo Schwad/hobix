@@ -182,21 +182,19 @@ module CommandLine
             return
         end
 
-        # This lists out some apache server settings. Disabled for now. Can
-        # be reviewed in another feature in the future.
-        # modes = load_patchsets
+        modes = load_patchsets
 
-        # puts "The default blog is available in the following modes:"
-        # puts "  #{ modes.keys.join( ', ' ) }"
-        # puts
-        # mode = nil
-        # loop do
-        #     print "Modes: [Comma between each mode or Enter for none] "
-        #     mode = gets.strip.downcase
-        #     m = mode
-        #     break if mode.empty? or not mode.split( /,/ ).detect { |m| m.strip!; not modes.has_key?( m ) }
-        #     puts "*** No `#{ m }' mode available."
-        # end
+        puts "The default blog is available in the following modes:"
+        puts "  #{ modes.keys.join( ', ' ) }"
+        puts
+        mode = nil
+        loop do
+            print "Modes: [Comma between each mode or Enter for none] "
+            mode = gets.strip.downcase
+            m = mode
+            break if mode.empty? or not mode.split( /,/ ).detect { |m| m.strip!; not modes.has_key?( m ) }
+            puts "*** No `#{ m }' mode available."
+        end
 
         require 'fileutils'
         FileUtils.makedirs path
