@@ -336,6 +336,7 @@ class Weblog
                 req, opts = req.to_a.first
             end
             plugin_conf = File.join( @path, req.gsub( /\W+/, '.' ) )
+            require 'pry'; binding.pry
             if File.exists? plugin_conf
                 puts "*** Loading #{ plugin_conf }"
                 plugin_conf = YAML::load_file plugin_conf

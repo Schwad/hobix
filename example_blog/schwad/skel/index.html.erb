@@ -1,0 +1,9 @@
+<% entries.each do |e| %>
+    <div class="titleBar">
+      <div class="entryTitle"><%= e.title %></div>
+      <div class="entryDate"><%= e.created.strftime( "%m %d %Y" ) %></div>
+    </div>
+    <div class="entryBody">
+      <%= e.content.to_html %>
+    </div>
+  <% end %>

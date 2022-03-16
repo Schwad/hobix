@@ -20,8 +20,5 @@ requires:
 - hobix/out/atom
 hobix_yaml: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad/hobix.yaml"
 path: "/Users/schwad/Documents/personal/talks/hobix_talk/hobix/example_blog/schwad"
-sections:
-  about:
-    ignore: true
-    sort_by: id
+sections: {}
 plugins: []
