@@ -201,11 +201,11 @@ module CommandLine
         FileUtils.cp_r Dir.glob( "#{ Hobix::SHARE_PATH }/default-blog/*" ), path
 
         # # apply any patches
-        # patchlist = mode.split( /,/ ).map { |m| modes[m.strip] }.flatten.uniq
-        # require 'hobix/util/patcher'
-        # patchlist.collect! { |p| "#{ Hobix::SHARE_PATH }/default-blog.#{ p }.patch" }
-        # patcher = Hobix::Util::Patcher[ *patchlist ]
-        # patcher.apply( path )
+        patchlist = mode.split( /,/ ).map { |m| modes[m.strip] }.flatten.uniq
+        require 'hobix/util/patcher'
+        patchlist.collect! { |p| "#{ Hobix::SHARE_PATH }/default-blog.#{ p }.patch" }
+        patcher = Hobix::Util::Patcher[ *patchlist ]
+        patcher.apply( path )
 
         hobix_yaml = File.join( path, "hobix.yaml" )
         join_as_author( name, hobix_yaml )

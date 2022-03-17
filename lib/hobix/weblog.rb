@@ -336,7 +336,6 @@ class Weblog
                 req, opts = req.to_a.first
             end
             plugin_conf = File.join( @path, req.gsub( /\W+/, '.' ) )
-            require 'pry'; binding.pry
             if File.exists? plugin_conf
                 puts "*** Loading #{ plugin_conf }"
                 plugin_conf = YAML::load_file plugin_conf
@@ -346,6 +345,7 @@ class Weblog
                     opts = plugin_conf
                 end
             end
+            require 'pry'; binding.pry
             @plugins += Hobix::BasePlugin::start( req, opts, self )
         end
     end
@@ -463,6 +463,7 @@ class Weblog
     # Sets up a weblog.  Should only be run once (which Hobix
     # performs automatically upon blog creation).
     def setup
+        require 'pry'; binding.pry
         @plugins.each do |p|
             if p.respond_to? :setup
                 p.setup

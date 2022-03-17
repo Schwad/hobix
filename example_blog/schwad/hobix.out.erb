@@ -1,3 +1,122 @@
-<h2> helloooo </h2>
+---
+title: |
 
-<%= entry.title %>
+  <%= weblog.title %>
+banner: |
+
+  <div id="banner">
+  <h1 class="title"><a href="<%= weblog.link %>"><%= weblog.title %></a></h1>
+  <div class="tagline"><%= weblog.tagline %></div>
+  </div>
+footer: 
+sidebar: |
+
+  <div id="sidebar">
+  <+ sidebar_list +>
+  </div>
+sidebar_list:
+- sidebar_archive
+- sidebar_links
+- sidebar_syndicate
+- sidebar_hobix
+sidebar_archive: |
+
+  <div class="sidebarBox">
+  <h2 class="sidebarTitle">Archive</h2>
+  <ul>
+  <% months = weblog.storage.get_months( weblog.storage.find ) %>
+  <% months.reverse.each do |month_start, month_end, month_id| %>
+      <li><a href="<%= weblog.expand_path month_id %>"><%= month_start.strftime( "%B %Y" ) %></a></li>
+  <% end %>
+  </ul>
+  </div>
+sidebar_links: |
+
+  <div class="sidebarBox">
+  <h2 class="sidebarTitle">Links</h2>
+  <%= weblog.linklist.content.to_html %>
+  </div>
+sidebar_syndicate: |
+
+  <div class="sidebarBox">
+  <h2 class="sidebarTitle">Syndicate</h2>
+  <ul>
+      <li><a href="<%= weblog.link %>/index.atom">Atom 1.0</a></li>
+  </ul>
+  </div>
+sidebar_hobix: |
+
+  <div class="sidebarBox">
+  <p>Built upon <a href="http://hobix.com">Hobix</a></p>
+  </div>
+blog: |
+
+  <div id="blog">
+  <+ entries +>
+  </div>
+entries: |
+
+  <% entries.each_day do |day, day_entries| %>
+      <+ day_header +>
+      <% day_entries.each do |entry| %>
+          <+ entry +>
+      <% end %>
+  <% end %>
+day_header: |
+
+  <h2 class="dayHeader" id="<%= day.strftime( "day%Y%m%d" ) %>"><%= day.strftime( "%A, %B %d, %Y" ) %></h2>
+entry: |
+
+  <div class="entry">
+      <+ entry_title +>
+      <+ entry_content +>
+  </div>
+  <div class="entryFooter"><+ entry_footer +></div>
+entry_title: |
+
+  <h3 class="entryTitle"><%= entry.title %></h3>
+  <% if entry.respond_to? :tagline and entry.tagline %><div class="entryTagline"><%= entry.tagline %></div><% end %>
+entry_content: |
+
+  <div class="entryContent"><%= entry.content.to_html %></div>
+entry_footer: "\nposted by <%= weblog.authors[entry.author]['name'] %> | \n<a href=\"<%=
+  weblog.expand_path entry.id %>.html\"><%= entry.created.strftime( \"%I:%M %p\" )
+  %></a>\n"
+head_tags: 
+css: |
+
+  @import "<%= weblog.expand_path "site.css" %>";
+doctype: |
+
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+page: |
+
+  <+ doctype +>
+  <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title><+ title +></title>
+  <+ head_tags +>
+  <style type="text/css">
+  <+ css +>
+  </style>
+  </head>
+  <body>
+
+  <div id="page">
+
+  <+ banner +>
+
+  <div id="content">
+  <+ sidebar +>
+
+  <+ blog +>
+
+  </div>
+
+  <+ footer +>
+
+  </div>
+
+  </body>
+  </html>

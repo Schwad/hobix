@@ -41,6 +41,9 @@ class BasePlugin
         require( req )
         @@required_from = nil
 
+        # SWEEEET --- okay where i left off the passing hash key is nil and it 
+        # has all this stuff. today it's returning nil (dunno why) and only kicking
+        # back empty hashes which means plugins aren't loaded!. start here and sort it
         if @@plugins[req]
             @@plugins[req].collect do |p|
                 if opts
@@ -52,6 +55,7 @@ class BasePlugin
         else
             []
         end
+        require 'pry'; binding.pry
     end
     def BasePlugin.inherited( sub )
         @@plugins[@@required_from] ||= []
